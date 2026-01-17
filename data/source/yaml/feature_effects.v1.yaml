@@ -1,0 +1,121 @@
+version: 1
+description: >-
+  Mapping from feature tags to expected adjustments in region geo fields.
+  Adjustments are applied when deriving region summaries, interface defaults,
+  and transition metrics that depend on regional climate or hydrology.
+notes:
+  - Paths use dotted notation for geo fields in world_region_model.
+  - Values are deltas or multipliers; clamp when working on normalized indices.
+  - Apply directional tags (rain_shadow/orographic_rain) only to the relevant side.
+defaults:
+  clamp_normalized: [0.0, 1.0]
+  units:
+    temperature_c: C
+    precipitation_mm_year: mm/year
+tags:
+  glacial_fed:
+    summary: Glacial melt stabilizes flow and reduces warm-season drying risk.
+    applies_to_kinds: [river, lake, glacier]
+    adjustments:
+      - path: geo.hydrology.seasonality.baseflow_index
+        op: add
+        value: 0.2
+        clamp: [0.0, 1.0]
+      - path: geo.hydrology.seasonality.drying_risk_summer
+        op: add
+        value: -0.2
+        clamp: [0.0, 1.0]
+  groundwater_fed:
+    summary: Groundwater recharge supports perennial flows.
+    applies_to_kinds: [river, aquifer, wetland]
+    adjustments:
+      - path: geo.hydrology.seasonality.baseflow_index
+        op: add
+        value: 0.15
+        clamp: [0.0, 1.0]
+      - path: geo.hydrology.seasonality.drying_risk_summer
+        op: add
+        value: -0.1
+        clamp: [0.0, 1.0]
+  ephemeral:
+    summary: Ephemeral channels increase drying risk and reduce baseflow.
+    applies_to_kinds: [river, wetland]
+    adjustments:
+      - path: geo.hydrology.seasonality.baseflow_index
+        op: add
+        value: -0.2
+        clamp: [0.0, 1.0]
+      - path: geo.hydrology.seasonality.drying_risk_summer
+        op: add
+        value: 0.25
+        clamp: [0.0, 1.0]
+  rain_shadow:
+    summary: Leeward drying from orographic blockage.
+    applies_to_kinds: [mountain_range, plateau]
+    directional: leeward_only
+    adjustments:
+      - path: geo.climate.precip_mm
+        op: multiply
+        value: 0.7
+      - path: geo.climate.seasonality.summer_dryness
+        op: add
+        value: 0.15
+        clamp: [0.0, 1.0]
+      - path: geo.hydrology.seasonality.drying_risk_summer
+        op: add
+        value: 0.15
+        clamp: [0.0, 1.0]
+  orographic_rain:
+    summary: Windward precipitation boost from uplift.
+    applies_to_kinds: [mountain_range, plateau]
+    directional: windward_only
+    adjustments:
+      - path: geo.climate.precip_mm
+        op: multiply
+        value: 1.3
+      - path: geo.climate.seasonality.winter_wetness
+        op: add
+        value: 0.1
+        clamp: [0.0, 1.0]
+  marine_moderation:
+    summary: Coastal temperature range reduction and slight moisture increase.
+    applies_to_kinds: [ocean_current, coast]
+    adjustments:
+      - path: geo.climate.temp_c
+        op: range_shrink
+        value: 0.85
+      - path: geo.climate.seasonality.summer_dryness
+        op: add
+        value: -0.05
+        clamp: [0.0, 1.0]
+  coastal_upwelling:
+    summary: Cold currents promote aridity and cooler coastal temperatures.
+    applies_to_kinds: [ocean_current, coast]
+    adjustments:
+      - path: geo.climate.precip_mm
+        op: multiply
+        value: 0.6
+      - path: geo.climate.temp_c
+        op: add
+        value: -2.0
+        units: C
+  snow_bound:
+    summary: Seasonal snow increases winter freeze risk and lowers permeability.
+    applies_to_kinds: [pass, mountain_range]
+    adjustments:
+      - path: geo.hydrology.seasonality.freeze_risk_winter
+        op: add
+        value: 0.2
+        clamp: [0.0, 1.0]
+  karst_infiltration:
+    summary: High infiltration reduces surface water persistence.
+    applies_to_kinds: [basin, plateau, plain]
+    adjustments:
+      - path: geo.hydrology.seasonality.baseflow_index
+        op: add
+        value: -0.1
+        clamp: [0.0, 1.0]
+      - path: geo.hydrology.seasonality.drying_risk_summer
+        op: add
+        value: 0.1
+        clamp: [0.0, 1.0]
