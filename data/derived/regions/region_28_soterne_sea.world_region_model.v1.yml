@@ -1,0 +1,40 @@
+version: 1
+region:
+  id: 28
+  name: Soterne Sea
+  kind: sea
+  geometry:
+    type: raster_label
+    source: colorcodes_labels.npy
+    value: 28
+    bbox_px:
+    - 0
+    - 435
+    - 390
+    - 699
+  geo:
+    summary: A warm, open sea with strong, steady currents. Surface warmth drives evaporation and feeds
+      atmospheric moisture inland.
+    climate:
+      notes: Storm systems forming here can travel far inland.
+      seasonality:
+        summer_dryness: 0.2
+        winter_wetness: 0.4
+    terrain:
+      elevation_m:
+        min: -3500
+        max: 0
+      ruggedness: 0.2
+      landforms:
+      - name: open_ocean_basin
+        weight: 0.7
+      - name: current_corridors
+        weight: 0.3
+    hydrology:
+      drainage: coastal
+      seasonality:
+        baseflow_index: 0.95
+        drying_risk_summer: 0.05
+        flood_risk_spring: 0.2
+        freeze_risk_winter: 0.05
+        notes: Persistent currents and high evaporation maintain warm surface waters.

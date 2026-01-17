@@ -1,0 +1,40 @@
+version: 1
+region:
+  id: 35
+  name: Berberye
+  kind: land
+  geometry:
+    type: raster_label
+    source: colorcodes_labels.npy
+    value: 35
+    bbox_px:
+    - 330
+    - 285
+    - 539
+    - 343
+  geo:
+    summary: A high, steep mountainous region marked by deep, narrow passes and abrupt slopes. Rapid elevation
+      loss to the north creates dramatic relief.
+    climate:
+      notes: Wind corridors between ranges generate persistent, powerful airflow.
+      seasonality:
+        summer_dryness: 0.4
+        winter_wetness: 0.6
+    terrain:
+      elevation_m:
+        min: 400
+        max: 3000
+      ruggedness: 0.85
+      landforms:
+      - name: steep_mountains
+        weight: 0.7
+      - name: narrow_passes
+        weight: 0.3
+    hydrology:
+      drainage: exorheic
+      seasonality:
+        baseflow_index: 0.5
+        drying_risk_summer: 0.3
+        flood_risk_spring: 0.6
+        freeze_risk_winter: 0.6
+        notes: Steep catchments with rapid runoff and seasonal snowmelt.

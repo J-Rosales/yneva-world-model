@@ -1,0 +1,40 @@
+version: 1
+region:
+  id: 14
+  name: Seuwyd
+  kind: sea
+  geometry:
+    type: raster_label
+    source: colorcodes_labels.npy
+    value: 14
+    bbox_px:
+    - 100
+    - 328
+    - 255
+    - 489
+  geo:
+    summary: A vast, deep valley flooded to form a large inland sea. Steep slopes descend sharply to the
+      waterline, with limited coastal plains.
+    climate:
+      notes: Slow exchange promotes stratified temperatures and long water residence times.
+      seasonality:
+        summer_dryness: 0.2
+        winter_wetness: 0.4
+    terrain:
+      elevation_m:
+        min: -2500
+        max: 0
+      ruggedness: 0.3
+      landforms:
+      - name: flooded_valley_basin
+        weight: 0.7
+      - name: steep_inland_shore
+        weight: 0.3
+    hydrology:
+      drainage: coastal
+      seasonality:
+        baseflow_index: 0.9
+        drying_risk_summer: 0.1
+        flood_risk_spring: 0.3
+        freeze_risk_winter: 0.2
+        notes: Ancient, tectonically stable basin with sluggish exchange.

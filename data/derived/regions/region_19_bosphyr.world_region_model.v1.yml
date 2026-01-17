@@ -1,0 +1,40 @@
+version: 1
+region:
+  id: 19
+  name: Bosphyr
+  kind: land
+  geometry:
+    type: raster_label
+    source: colorcodes_labels.npy
+    value: 19
+    bbox_px:
+    - 434
+    - 533
+    - 638
+    - 692
+  geo:
+    summary: Rolling hills that flatten eastward into broad deltas, with many rivers converging before
+      entering Chrystom. Seasonal flooding is common.
+    climate:
+      notes: Temperate climate with warm summers and moderate rainfall.
+      seasonality:
+        summer_dryness: 0.3
+        winter_wetness: 0.5
+    terrain:
+      elevation_m:
+        min: 0
+        max: 900
+      ruggedness: 0.35
+      landforms:
+      - name: rolling_hills
+        weight: 0.5
+      - name: river_deltas
+        weight: 0.5
+    hydrology:
+      drainage: exorheic
+      seasonality:
+        baseflow_index: 0.6
+        drying_risk_summer: 0.3
+        flood_risk_spring: 0.7
+        freeze_risk_winter: 0.3
+        notes: Converging rivers deposit rich sediments and flood lowlands seasonally.

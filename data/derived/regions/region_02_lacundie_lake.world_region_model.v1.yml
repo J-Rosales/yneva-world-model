@@ -1,0 +1,40 @@
+version: 1
+region:
+  id: 2
+  name: Lacundie Lake
+  kind: lake
+  geometry:
+    type: raster_label
+    source: colorcodes_labels.npy
+    value: 2
+    bbox_px:
+    - 330
+    - 400
+    - 390
+    - 426
+  geo:
+    summary: A large freshwater lake at the lowest point of a steep valley system, fed by short rivers
+      and seasonal meltwater. Cold, oxygen-rich depths with stable water levels and limited outflow.
+    climate:
+      notes: Acts as a thermal buffer, delaying autumn frost and prolonging spring thaw in the valley.
+      seasonality:
+        summer_dryness: 0.2
+        winter_wetness: 0.4
+    terrain:
+      elevation_m:
+        min: -300
+        max: 0
+      ruggedness: 0.2
+      landforms:
+      - name: deep_lake_basin
+        weight: 0.7
+      - name: steep_valley_walls
+        weight: 0.3
+    hydrology:
+      drainage: exorheic
+      seasonality:
+        baseflow_index: 0.7
+        drying_risk_summer: 0.2
+        flood_risk_spring: 0.5
+        freeze_risk_winter: 0.6
+        notes: Cold lake with regulated outflow; sensitive to long-term precipitation shifts.

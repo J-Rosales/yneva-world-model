@@ -1,0 +1,40 @@
+version: 1
+region:
+  id: 6
+  name: Norvik
+  kind: land
+  geometry:
+    type: raster_label
+    source: colorcodes_labels.npy
+    value: 6
+    bbox_px:
+    - 144
+    - 257
+    - 182
+    - 310
+  geo:
+    summary: A compact coastal basin enclosed by foothills on three sides, opening toward the sea. Fertile
+      lowlands are sheltered from extreme winds.
+    climate:
+      notes: Mild maritime climate with cool summers and moderate winters.
+      seasonality:
+        summer_dryness: 0.2
+        winter_wetness: 0.5
+    terrain:
+      elevation_m:
+        min: 10
+        max: 500
+      ruggedness: 0.3
+      landforms:
+      - name: coastal_basin
+        weight: 0.6
+      - name: foothills
+        weight: 0.4
+    hydrology:
+      drainage: coastal
+      seasonality:
+        baseflow_index: 0.6
+        drying_risk_summer: 0.2
+        flood_risk_spring: 0.4
+        freeze_risk_winter: 0.3
+        notes: Short, reliable rivers draining quickly from surrounding uplands.

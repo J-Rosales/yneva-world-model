@@ -1,0 +1,40 @@
+version: 1
+region:
+  id: 18
+  name: Erisdon
+  kind: land
+  geometry:
+    type: raster_label
+    source: colorcodes_labels.npy
+    value: 18
+    bbox_px:
+    - 111
+    - 391
+    - 396
+    - 542
+  geo:
+    summary: A major mountain chain descending from the northeast to the southwest, transitioning from
+      alpine peaks to lower hills before meeting the sea.
+    climate:
+      notes: Strong orographic barrier producing rain shadows on leeward sides.
+      seasonality:
+        summer_dryness: 0.4
+        winter_wetness: 0.6
+    terrain:
+      elevation_m:
+        min: 200
+        max: 4200
+      ruggedness: 0.9
+      landforms:
+      - name: mountain_chain
+        weight: 0.7
+      - name: descending_hills
+        weight: 0.3
+    hydrology:
+      drainage: exorheic
+      seasonality:
+        baseflow_index: 0.5
+        drying_risk_summer: 0.3
+        flood_risk_spring: 0.7
+        freeze_risk_winter: 0.7
+        notes: Snowpack-driven flows with strong seasonal melt.

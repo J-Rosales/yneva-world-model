@@ -1,0 +1,40 @@
+version: 1
+region:
+  id: 21
+  name: Aloppin
+  kind: land
+  geometry:
+    type: raster_label
+    source: colorcodes_labels.npy
+    value: 21
+    bbox_px:
+    - 303
+    - 546
+    - 531
+    - 682
+  geo:
+    summary: Rolling hills and open plains interspersed with marshes and river deltas, especially toward
+      the west. Soils are fertile but unevenly drained.
+    climate:
+      notes: Mild climate with distinct seasons and frequent lowland fogs.
+      seasonality:
+        summer_dryness: 0.3
+        winter_wetness: 0.5
+    terrain:
+      elevation_m:
+        min: 0
+        max: 600
+      ruggedness: 0.3
+      landforms:
+      - name: plains
+        weight: 0.5
+      - name: marshes
+        weight: 0.5
+    hydrology:
+      drainage: exorheic
+      seasonality:
+        baseflow_index: 0.6
+        drying_risk_summer: 0.3
+        flood_risk_spring: 0.6
+        freeze_risk_winter: 0.3
+        notes: Wetland networks increase flood persistence in low-lying areas.

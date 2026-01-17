@@ -1,0 +1,40 @@
+version: 1
+region:
+  id: 0
+  name: Miscellaneous Bodies of Water
+  kind: lake
+  geometry:
+    type: raster_label
+    source: colorcodes_labels.npy
+    value: 0
+    bbox_px:
+    - 43
+    - 185
+    - 609
+    - 430
+  geo:
+    summary: Small, enclosed lagoons and lakes embedded within surrounding regions; treated collectively
+      as a miscellaneous water set without further elaboration.
+    climate:
+      notes: Local microclimates reflect adjacent land and water regimes; conditions vary by enclosure.
+      seasonality:
+        summer_dryness: 0.4
+        winter_wetness: 0.4
+    terrain:
+      elevation_m:
+        min: -50
+        max: 50
+      ruggedness: 0.1
+      landforms:
+      - name: lagoon
+        weight: 0.6
+      - name: small_lake
+        weight: 0.4
+    hydrology:
+      drainage: endorheic
+      seasonality:
+        baseflow_index: 0.6
+        drying_risk_summer: 0.4
+        flood_risk_spring: 0.3
+        freeze_risk_winter: 0.4
+        notes: Hydrology varies by component; small basins with limited exchange.

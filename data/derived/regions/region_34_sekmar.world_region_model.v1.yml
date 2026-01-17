@@ -1,0 +1,40 @@
+version: 1
+region:
+  id: 34
+  name: Sekmar
+  kind: land
+  geometry:
+    type: raster_label
+    source: colorcodes_labels.npy
+    value: 34
+    bbox_px:
+    - 45
+    - 437
+    - 142
+    - 505
+  geo:
+    summary: A narrow, rocky land bridge connecting two major seas. Terrain is uneven and arid, with strong
+      winds funneled along the corridor.
+    climate:
+      notes: Dry, windy transition zone with limited precipitation.
+      seasonality:
+        summer_dryness: 0.6
+        winter_wetness: 0.2
+    terrain:
+      elevation_m:
+        min: 50
+        max: 900
+      ruggedness: 0.6
+      landforms:
+      - name: rocky_corridor
+        weight: 0.6
+      - name: wind_gaps
+        weight: 0.4
+    hydrology:
+      drainage: coastal
+      seasonality:
+        baseflow_index: 0.3
+        drying_risk_summer: 0.7
+        flood_risk_spring: 0.2
+        freeze_risk_winter: 0.3
+        notes: Sparse runoff with high summer drying risk.

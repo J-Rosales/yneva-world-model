@@ -1,0 +1,40 @@
+version: 1
+region:
+  id: 32
+  name: Brishladhe
+  kind: land
+  geometry:
+    type: raster_label
+    source: colorcodes_labels.npy
+    value: 32
+    bbox_px:
+    - 327
+    - 107
+    - 556
+    - 243
+  geo:
+    summary: A western coastal region with rugged shorelines and forested inland slopes. Southern forests
+      are dense and long-established.
+    climate:
+      notes: Cool, wet climate with frequent rain from prevailing winds.
+      seasonality:
+        summer_dryness: 0.2
+        winter_wetness: 0.7
+    terrain:
+      elevation_m:
+        min: 0
+        max: 1100
+      ruggedness: 0.5
+      landforms:
+      - name: rugged_coast
+        weight: 0.5
+      - name: forested_slopes
+        weight: 0.5
+    hydrology:
+      drainage: coastal
+      seasonality:
+        baseflow_index: 0.7
+        drying_risk_summer: 0.2
+        flood_risk_spring: 0.4
+        freeze_risk_winter: 0.3
+        notes: Rain-fed streams with steady flow across forested slopes.

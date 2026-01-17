@@ -1,0 +1,40 @@
+version: 1
+region:
+  id: 12
+  name: Malstrond
+  kind: sea
+  geometry:
+    type: raster_label
+    source: colorcodes_labels.npy
+    value: 12
+    bbox_px:
+    - 607
+    - 2
+    - 699
+    - 249
+  geo:
+    summary: A persistent, large-scale oceanic vortex occupying a fixed position. The rotating water mass
+      alters regional winds, sea temperatures, and storm tracks.
+    climate:
+      notes: Prevailing winds curve around the vortex, amplifying coastal weather variability.
+      seasonality:
+        summer_dryness: 0.3
+        winter_wetness: 0.5
+    terrain:
+      elevation_m:
+        min: -3500
+        max: 0
+      ruggedness: 0.2
+      landforms:
+      - name: oceanic_vortex_zone
+        weight: 0.6
+      - name: open_ocean_basin
+        weight: 0.4
+    hydrology:
+      drainage: coastal
+      seasonality:
+        baseflow_index: 0.95
+        drying_risk_summer: 0.05
+        flood_risk_spring: 0.2
+        freeze_risk_winter: 0.2
+        notes: Stable, long-lived vortex with persistent circulation anomalies.

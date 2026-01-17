@@ -1,0 +1,40 @@
+version: 1
+region:
+  id: 20
+  name: Sudrgordel
+  kind: land
+  geometry:
+    type: raster_label
+    source: colorcodes_labels.npy
+    value: 20
+    bbox_px:
+    - 309
+    - 290
+    - 646
+    - 415
+  geo:
+    summary: "The highest mountain chain in the modeled area, running east\u2013west with sharp peaks,\
+      \ deep passes, and extensive glacial evidence."
+    climate:
+      notes: Persistent snow and ice at elevation; wind corridors intensify regional airflow.
+      seasonality:
+        summer_dryness: 0.4
+        winter_wetness: 0.7
+    terrain:
+      elevation_m:
+        min: 800
+        max: 5200
+      ruggedness: 0.95
+      landforms:
+      - name: high_alpine_range
+        weight: 0.7
+      - name: glaciated_peaks
+        weight: 0.3
+    hydrology:
+      drainage: exorheic
+      seasonality:
+        baseflow_index: 0.5
+        drying_risk_summer: 0.3
+        flood_risk_spring: 0.8
+        freeze_risk_winter: 0.9
+        notes: Glacial and snowmelt runoff with strong spring peaks.

@@ -1,0 +1,40 @@
+version: 1
+region:
+  id: 17
+  name: Feynman Island
+  kind: island
+  geometry:
+    type: raster_label
+    source: colorcodes_labels.npy
+    value: 17
+    bbox_px:
+    - 469
+    - 60
+    - 515
+    - 112
+  geo:
+    summary: A cold, windswept island of variable altitude with exposed highlands and sheltered coastal
+      inlets. Weather is highly variable with frequent storms.
+    climate:
+      notes: Snow persists at elevation for much of the year; rapid temperature shifts are common.
+      seasonality:
+        summer_dryness: 0.2
+        winter_wetness: 0.7
+    terrain:
+      elevation_m:
+        min: 0
+        max: 1800
+      ruggedness: 0.6
+      landforms:
+      - name: windswept_highlands
+        weight: 0.6
+      - name: sheltered_inlets
+        weight: 0.4
+    hydrology:
+      drainage: coastal
+      seasonality:
+        baseflow_index: 0.6
+        drying_risk_summer: 0.2
+        flood_risk_spring: 0.6
+        freeze_risk_winter: 0.7
+        notes: Storm-fed runoff with prolonged snow cover at higher elevations.

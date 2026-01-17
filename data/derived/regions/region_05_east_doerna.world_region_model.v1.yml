@@ -1,0 +1,40 @@
+version: 1
+region:
+  id: 5
+  name: East Doerna
+  kind: land
+  geometry:
+    type: raster_label
+    source: colorcodes_labels.npy
+    value: 5
+    bbox_px:
+    - 0
+    - 173
+    - 126
+    - 460
+  geo:
+    summary: Extensive forested lowland with gentle rolling terrain and deep soils. Cool-temperate climate
+      with consistent rainfall supports dense woodland and steady river runoff.
+    climate:
+      notes: Maritime influence moderates temperature extremes; rainfall is broadly year-round.
+      seasonality:
+        summer_dryness: 0.2
+        winter_wetness: 0.5
+    terrain:
+      elevation_m:
+        min: 50
+        max: 600
+      ruggedness: 0.25
+      landforms:
+      - name: forested_lowland
+        weight: 0.7
+      - name: rolling_hills
+        weight: 0.3
+    hydrology:
+      drainage: exorheic
+      seasonality:
+        baseflow_index: 0.7
+        drying_risk_summer: 0.2
+        flood_risk_spring: 0.4
+        freeze_risk_winter: 0.4
+        notes: Perennial rivers fed by steady precipitation and forested catchments.

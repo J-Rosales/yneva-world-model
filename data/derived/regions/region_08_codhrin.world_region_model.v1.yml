@@ -1,0 +1,40 @@
+version: 1
+region:
+  id: 8
+  name: Codhrin
+  kind: sea
+  geometry:
+    type: raster_label
+    source: colorcodes_labels.npy
+    value: 8
+    bbox_px:
+    - 495
+    - 535
+    - 568
+    - 561
+  geo:
+    summary: A small, enclosed marine sub-basin linked to Chrystom by narrow straits. Exchange is restricted,
+      creating calm waters and salinity stratification.
+    climate:
+      notes: Seasonal temperature variation is muted by sheltered conditions.
+      seasonality:
+        summer_dryness: 0.2
+        winter_wetness: 0.4
+    terrain:
+      elevation_m:
+        min: -800
+        max: 0
+      ruggedness: 0.1
+      landforms:
+      - name: enclosed_basin
+        weight: 0.7
+      - name: strait_connections
+        weight: 0.3
+    hydrology:
+      drainage: coastal
+      seasonality:
+        baseflow_index: 0.9
+        drying_risk_summer: 0.05
+        flood_risk_spring: 0.2
+        freeze_risk_winter: 0.1
+        notes: Restricted exchange yields stable, stratified water columns.
