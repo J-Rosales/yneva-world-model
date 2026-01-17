@@ -71,4 +71,25 @@ Use A when you need numeric behavior; use B when you only need classification.
    - feature tag `glacial_fed` lowers summer drying hazards
    - feature tag `ephemeral` increases summer crossing hazards for rivers
    - feature tag `snow_bound` decreases winter permeability for passes
-5. Write the interface YAML and allow manual edits for lore-specific claims (named passes, tunnels, ferries, political restrictions).
+5. Compute per-adjacent-pair deltas for coherence checks and write them to `outputs/region_transition_metrics.v1.json`.
+6. Write the interface YAML and allow manual edits for lore-specific claims (named passes, tunnels, ferries, political restrictions).
+
+## Adjacent-pair transition metrics output
+Store computed deltas for each adjacent pair in `outputs/region_transition_metrics.v1.json` so coherence queries can reference concrete numbers.
+
+**Format (JSON):**
+- `version`: schema version string (e.g., `"1"`).
+- `generated_at`: ISO timestamp or `null` for placeholders.
+- `pairs`: list of metrics objects, each with:
+  - `a`, `b`: region ids (canonical ordering).
+  - `adjacency`: boolean.
+  - `border_length_px`: shared border length in pixels (or `null` if unknown).
+  - `deltas`:
+    - `temperature_c`: mean annual temperature delta (A − B).
+    - `precipitation_mm_per_year`: annual precipitation delta (A − B).
+    - `elevation_m`: mean elevation delta (A − B).
+    - `moisture_index`: delta in moisture/aridity index (A − B).
+    - `climate_indices`: object of named climate index deltas (optional).
+  - `notes`: optional list of strings for explanations (e.g., `"orographic_barrier"`).
+
+Use this output to drive QA checks in `docs/qa/world_coherence_checks.md` and to answer interface coherence questions.

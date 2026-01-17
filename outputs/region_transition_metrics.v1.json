@@ -1,0 +1,8 @@
+{
+  "version": "1",
+  "generated_at": null,
+  "pairs": [],
+  "notes": [
+    "Placeholder file. Populate via the interface build step to enable adjacent-region coherence checks."
+  ]
+}
