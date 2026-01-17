@@ -1,0 +1,94 @@
+version: 1
+planet:
+  name: yneva
+  rotation_rate: 1.0
+  axial_tilt_deg: 23.5
+  orbital_eccentricity: 0.0167
+  mean_solar_constant: 1361
+  coriolis_strength: 1.0
+circulation:
+  cells:
+    hadley_edge_deg: 30
+    ferrel_edge_deg: 60
+  itcz:
+    mean_latitude_deg: 0
+    seasonal_shift_deg: 10
+    peak_months_nh: [7, 8]
+    peak_months_sh: [1, 2]
+  wind_belts:
+    - id: trade_winds_nh
+      lat_range_deg: [0, 30]
+      direction_deg: 300
+      strength: 0.7
+      seasonality: low
+    - id: westerlies_nh
+      lat_range_deg: [30, 60]
+      direction_deg: 240
+      strength: 0.6
+      seasonality: medium
+    - id: polar_easterlies_nh
+      lat_range_deg: [60, 90]
+      direction_deg: 90
+      strength: 0.5
+      seasonality: high
+    - id: trade_winds_sh
+      lat_range_deg: [-30, 0]
+      direction_deg: 60
+      strength: 0.7
+      seasonality: low
+    - id: westerlies_sh
+      lat_range_deg: [-60, -30]
+      direction_deg: 120
+      strength: 0.6
+      seasonality: medium
+    - id: polar_easterlies_sh
+      lat_range_deg: [-90, -60]
+      direction_deg: 270
+      strength: 0.5
+      seasonality: high
+land_ocean:
+  land_fraction: 0.29
+  ocean_fraction: 0.71
+  continentality_distance_km:
+    coastal: 200
+    inland: 800
+  coastal_moderation_strength: 0.6
+ocean:
+  gyres:
+    - id: north_subtropical_gyre
+      hemisphere: north
+      center_lat_deg: 25
+      current_bias: clockwise
+      warm_currents: [western_boundary]
+      cold_currents: [eastern_boundary]
+  upwelling_zones:
+    - id: eastern_boundary_upwelling
+      lat_range_deg: [-30, 30]
+      strength: 0.7
+  current_temperature_offsets:
+    warm_current_c: 3.0
+    cold_current_c: -3.0
+orography:
+  lapse_rate_c_per_km: 6.5
+  orographic_precip_multiplier: 1.4
+  rain_shadow_reduction: 0.6
+seasonality:
+  baseline_temperature_range_c:
+    tropical: 6
+    temperate: 18
+    polar: 30
+  monsoon:
+    land_sea_contrast_threshold_c: 8
+    onset_months_nh: [6, 7]
+    onset_months_sh: [12, 1]
+derived_rules:
+  temperature:
+    latitude_gradient_c_per_deg: 0.6
+    maritime_offset_c: 2.0
+  precipitation:
+    itcz_boost_mm_per_month: 80
+    trade_wind_moisture_transport: 0.7
+    continental_drying_mm_per_month: -40
+  seasonality:
+    continentality_multiplier: 1.3
+    axial_tilt_multiplier: 1.0
