@@ -1,0 +1,40 @@
+version: 1
+region:
+  id: 4
+  name: Chrystom
+  kind: sea
+  geometry:
+    type: raster_label
+    source: colorcodes_labels.npy
+    value: 4
+    bbox_px:
+    - 559
+    - 485
+    - 699
+    - 699
+  geo:
+    summary: A low-altitude inland sea connected by narrow passages and fed by multiple river systems.
+      Warm surface waters and high evaporation balanced by steady deltaic inflow.
+    climate:
+      notes: Humid, fertile coastal plains with pronounced seasonal flooding along river mouths.
+      seasonality:
+        summer_dryness: 0.2
+        winter_wetness: 0.5
+    terrain:
+      elevation_m:
+        min: -1500
+        max: 0
+      ruggedness: 0.15
+      landforms:
+      - name: inland_sea_basin
+        weight: 0.6
+      - name: deltaic_coast
+        weight: 0.4
+    hydrology:
+      drainage: coastal
+      seasonality:
+        baseflow_index: 0.85
+        drying_risk_summer: 0.15
+        flood_risk_spring: 0.6
+        freeze_risk_winter: 0.1
+        notes: Warm inland sea with strong river inputs and seasonal floodplains.

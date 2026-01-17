@@ -1,0 +1,40 @@
+version: 1
+region:
+  id: 11
+  name: Lacundie
+  kind: land
+  geometry:
+    type: raster_label
+    source: colorcodes_labels.npy
+    value: 11
+    bbox_px:
+    - 313
+    - 395
+    - 427
+    - 471
+  geo:
+    summary: A deep canyon valley carved between surrounding highlands, with steep walls and limited approaches
+      except to the east. Moisture and heat are trapped in the valley.
+    climate:
+      notes: Localized climate distinct from neighboring regions, with warm pockets and spring flooding.
+      seasonality:
+        summer_dryness: 0.3
+        winter_wetness: 0.4
+    terrain:
+      elevation_m:
+        min: 200
+        max: 1800
+      ruggedness: 0.7
+      landforms:
+      - name: canyon_valley
+        weight: 0.7
+      - name: steep_walls
+        weight: 0.3
+    hydrology:
+      drainage: exorheic
+      seasonality:
+        baseflow_index: 0.6
+        drying_risk_summer: 0.3
+        flood_risk_spring: 0.7
+        freeze_risk_winter: 0.4
+        notes: Confined, fast-flowing rivers prone to spring flood surges.

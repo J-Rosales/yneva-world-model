@@ -1,0 +1,40 @@
+version: 1
+region:
+  id: 31
+  name: Varmalund
+  kind: land
+  geometry:
+    type: raster_label
+    source: colorcodes_labels.npy
+    value: 31
+    bbox_px:
+    - 523
+    - 201
+    - 650
+    - 329
+  geo:
+    summary: A low plateau enclosed by higher mountains to the east, trapping air masses and producing
+      temperature inversions and fog.
+    climate:
+      notes: Temperate but variable climate with colder winters than surrounding lowlands.
+      seasonality:
+        summer_dryness: 0.4
+        winter_wetness: 0.5
+    terrain:
+      elevation_m:
+        min: 200
+        max: 1200
+      ruggedness: 0.4
+      landforms:
+      - name: enclosed_plateau
+        weight: 0.6
+      - name: foggy_basins
+        weight: 0.4
+    hydrology:
+      drainage: exorheic
+      seasonality:
+        baseflow_index: 0.5
+        drying_risk_summer: 0.4
+        flood_risk_spring: 0.5
+        freeze_risk_winter: 0.6
+        notes: Variable flow regimes influenced by inversion-driven freeze risk.

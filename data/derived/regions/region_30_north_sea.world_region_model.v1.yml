@@ -1,0 +1,40 @@
+version: 1
+region:
+  id: 30
+  name: North Sea
+  kind: sea
+  geometry:
+    type: raster_label
+    source: colorcodes_labels.npy
+    value: 30
+    bbox_px:
+    - 2
+    - 0
+    - 699
+    - 290
+  geo:
+    summary: A cold, shallow sea with extensive continental shelves. Seasonal ice can form in sheltered
+      areas.
+    climate:
+      notes: Strongly moderates adjacent climates by increasing humidity and cloud cover.
+      seasonality:
+        summer_dryness: 0.3
+        winter_wetness: 0.6
+    terrain:
+      elevation_m:
+        min: -800
+        max: 0
+      ruggedness: 0.1
+      landforms:
+      - name: shallow_shelf_sea
+        weight: 0.7
+      - name: ice_prone_bays
+        weight: 0.3
+    hydrology:
+      drainage: coastal
+      seasonality:
+        baseflow_index: 0.95
+        drying_risk_summer: 0.05
+        flood_risk_spring: 0.2
+        freeze_risk_winter: 0.6
+        notes: Cold shelf sea with seasonal ice formation in sheltered waters.

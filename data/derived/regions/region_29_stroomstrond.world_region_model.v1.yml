@@ -1,0 +1,40 @@
+version: 1
+region:
+  id: 29
+  name: Stroomstrond
+  kind: land
+  geometry:
+    type: raster_label
+    source: colorcodes_labels.npy
+    value: 29
+    bbox_px:
+    - 597
+    - 162
+    - 640
+    - 254
+  geo:
+    summary: A cold coastline with mixed beaches, low cliffs, and grassy plains. Strong winds and nearby
+      oceanic anomalies shape the shoreline.
+    climate:
+      notes: Cool, unstable climate with rapid weather changes.
+      seasonality:
+        summer_dryness: 0.3
+        winter_wetness: 0.6
+    terrain:
+      elevation_m:
+        min: 0
+        max: 400
+      ruggedness: 0.4
+      landforms:
+      - name: coastal_plain
+        weight: 0.5
+      - name: low_cliffs
+        weight: 0.5
+    hydrology:
+      drainage: coastal
+      seasonality:
+        baseflow_index: 0.5
+        drying_risk_summer: 0.3
+        flood_risk_spring: 0.4
+        freeze_risk_winter: 0.5
+        notes: Wind-driven precipitation variability and cold-season freeze risk.

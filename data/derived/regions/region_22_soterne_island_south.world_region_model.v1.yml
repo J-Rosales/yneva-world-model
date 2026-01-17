@@ -1,0 +1,41 @@
+version: 1
+region:
+  id: 22
+  name: Soterne Island South
+  kind: island
+  geometry:
+    type: raster_label
+    source: colorcodes_labels.npy
+    value: 22
+    bbox_px:
+    - 137
+    - 644
+    - 167
+    - 661
+  geo:
+    summary: A smaller southern island with low relief and warm, humid conditions. The island is sheltered
+      with calmer coastal waters.
+    climate:
+      notes: Abundant rainfall supports dense vegetation; severe storms are less frequent than the northern
+        island.
+      seasonality:
+        summer_dryness: 0.2
+        winter_wetness: 0.4
+    terrain:
+      elevation_m:
+        min: 0
+        max: 400
+      ruggedness: 0.2
+      landforms:
+      - name: low_relief_island
+        weight: 0.7
+      - name: humid_coastal_fringes
+        weight: 0.3
+    hydrology:
+      drainage: coastal
+      seasonality:
+        baseflow_index: 0.7
+        drying_risk_summer: 0.2
+        flood_risk_spring: 0.4
+        freeze_risk_winter: 0.05
+        notes: Short, humid catchments with steady flow.

@@ -1,0 +1,40 @@
+version: 1
+region:
+  id: 33
+  name: Myrstrond
+  kind: land
+  geometry:
+    type: raster_label
+    source: colorcodes_labels.npy
+    value: 33
+    bbox_px:
+    - 548
+    - 150
+    - 597
+    - 223
+  geo:
+    summary: Cold, low-lying wetlands and swamps with poor drainage. The landscape is flat, waterlogged,
+      and biologically rich.
+    climate:
+      notes: Seasonal flooding is common; solid ground is limited to raised areas.
+      seasonality:
+        summer_dryness: 0.3
+        winter_wetness: 0.6
+    terrain:
+      elevation_m:
+        min: 0
+        max: 150
+      ruggedness: 0.15
+      landforms:
+      - name: wetlands
+        weight: 0.7
+      - name: raised_islands
+        weight: 0.3
+    hydrology:
+      drainage: cryptorheic
+      seasonality:
+        baseflow_index: 0.5
+        drying_risk_summer: 0.3
+        flood_risk_spring: 0.7
+        freeze_risk_winter: 0.6
+        notes: Poor drainage and saturated soils sustain persistent wetlands.

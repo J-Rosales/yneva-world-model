@@ -1,0 +1,40 @@
+version: 1
+region:
+  id: 9
+  name: Ositeppe
+  kind: land
+  geometry:
+    type: raster_label
+    source: colorcodes_labels.npy
+    value: 9
+    bbox_px:
+    - 602
+    - 313
+    - 666
+    - 389
+  geo:
+    summary: A low-lying coastal protrusion with extensive wetlands and shallow river mouths. Flat to
+      gently undulating terrain is prone to waterlogging.
+    climate:
+      notes: Cool, humid conditions with frequent fog and strong coastal winds.
+      seasonality:
+        summer_dryness: 0.2
+        winter_wetness: 0.6
+    terrain:
+      elevation_m:
+        min: 0
+        max: 120
+      ruggedness: 0.15
+      landforms:
+      - name: coastal_plain
+        weight: 0.5
+      - name: wetlands
+        weight: 0.5
+    hydrology:
+      drainage: coastal
+      seasonality:
+        baseflow_index: 0.5
+        drying_risk_summer: 0.3
+        flood_risk_spring: 0.6
+        freeze_risk_winter: 0.4
+        notes: High groundwater and shallow channels raise flood and waterlogging risk.

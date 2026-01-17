@@ -1,0 +1,40 @@
+version: 1
+region:
+  id: 16
+  name: Orodwydd
+  kind: land
+  geometry:
+    type: raster_label
+    source: colorcodes_labels.npy
+    value: 16
+    bbox_px:
+    - 476
+    - 194
+    - 536
+    - 267
+  geo:
+    summary: An exceptionally dense, ancient forest on low to moderate relief. The canopy increases precipitation
+      through evapotranspiration and moisture recycling.
+    climate:
+      notes: High rainfall persists even during drier seasons due to forest feedbacks.
+      seasonality:
+        summer_dryness: 0.1
+        winter_wetness: 0.5
+    terrain:
+      elevation_m:
+        min: 100
+        max: 700
+      ruggedness: 0.25
+      landforms:
+      - name: ancient_forest
+        weight: 0.7
+      - name: low_relief_uplands
+        weight: 0.3
+    hydrology:
+      drainage: exorheic
+      seasonality:
+        baseflow_index: 0.8
+        drying_risk_summer: 0.1
+        flood_risk_spring: 0.4
+        freeze_risk_winter: 0.2
+        notes: Perennial rivers with stable baseflow from forested catchments.

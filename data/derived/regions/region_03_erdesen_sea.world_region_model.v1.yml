@@ -1,0 +1,40 @@
+version: 1
+region:
+  id: 3
+  name: Erdesen Sea
+  kind: sea
+  geometry:
+    type: raster_label
+    source: colorcodes_labels.npy
+    value: 3
+    bbox_px:
+    - 598
+    - 238
+    - 699
+    - 504
+  geo:
+    summary: An open, temperate-to-cool sea with a defined continental shelf and rugged coastline. Frequent
+      storms and strong seasonal winds drive cold currents and nutrient mixing.
+    climate:
+      notes: Boosts cloud cover, precipitation, and wind exposure on adjacent lowlands.
+      seasonality:
+        summer_dryness: 0.3
+        winter_wetness: 0.7
+    terrain:
+      elevation_m:
+        min: -3000
+        max: 0
+      ruggedness: 0.25
+      landforms:
+      - name: marine_basin
+        weight: 0.7
+      - name: continental_shelf
+        weight: 0.3
+    hydrology:
+      drainage: coastal
+      seasonality:
+        baseflow_index: 0.95
+        drying_risk_summer: 0.05
+        flood_risk_spring: 0.25
+        freeze_risk_winter: 0.3
+        notes: Storm-dominated sea with cold currents and high mixing.

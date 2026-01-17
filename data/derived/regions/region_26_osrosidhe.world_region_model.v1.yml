@@ -1,0 +1,40 @@
+version: 1
+region:
+  id: 26
+  name: Osrosidhe
+  kind: land
+  geometry:
+    type: raster_label
+    source: colorcodes_labels.npy
+    value: 26
+    bbox_px:
+    - 361
+    - 207
+    - 534
+    - 309
+  geo:
+    summary: A transitional upland linking lowlands to major mountain systems. Northern slopes are forested
+      while southern areas rise toward rocky passes.
+    climate:
+      notes: Ecological gradient from moist forest to drier, higher-elevation passes.
+      seasonality:
+        summer_dryness: 0.3
+        winter_wetness: 0.5
+    terrain:
+      elevation_m:
+        min: 300
+        max: 1700
+      ruggedness: 0.6
+      landforms:
+      - name: upland_slopes
+        weight: 0.6
+      - name: rocky_passes
+        weight: 0.4
+    hydrology:
+      drainage: exorheic
+      seasonality:
+        baseflow_index: 0.6
+        drying_risk_summer: 0.3
+        flood_risk_spring: 0.5
+        freeze_risk_winter: 0.4
+        notes: Mixed runoff regimes along forested and rocky slopes.

@@ -1,0 +1,40 @@
+version: 1
+region:
+  id: 15
+  name: Sersidhe
+  kind: land
+  geometry:
+    type: raster_label
+    source: colorcodes_labels.npy
+    value: 15
+    bbox_px:
+    - 194
+    - 107
+    - 326
+    - 287
+  geo:
+    summary: An exposed western coastline marked by cliffs, headlands, and narrow coastal plains. Inland
+      terrain rises gradually into mixed forests and pasture.
+    climate:
+      notes: Cool, oceanic climate with frequent rainfall and strong prevailing winds.
+      seasonality:
+        summer_dryness: 0.2
+        winter_wetness: 0.7
+    terrain:
+      elevation_m:
+        min: 0
+        max: 800
+      ruggedness: 0.5
+      landforms:
+      - name: rocky_coast
+        weight: 0.6
+      - name: rising_uplands
+        weight: 0.4
+    hydrology:
+      drainage: coastal
+      seasonality:
+        baseflow_index: 0.6
+        drying_risk_summer: 0.2
+        flood_risk_spring: 0.4
+        freeze_risk_winter: 0.3
+        notes: Maritime-fed streams with wind-driven precipitation.

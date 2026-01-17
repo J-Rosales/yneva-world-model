@@ -1,0 +1,40 @@
+version: 1
+region:
+  id: 1
+  name: Pelagian Sea
+  kind: sea
+  geometry:
+    type: raster_label
+    source: colorcodes_labels.npy
+    value: 1
+    bbox_px:
+    - 0
+    - 0
+    - 57
+    - 249
+  geo:
+    summary: A semi-enclosed marine basin opening broadly to the north and west, with complex inlets and
+      shallow shelves. Moderately warm, saline circulation with seasonal upwelling along exposed margins.
+    climate:
+      notes: Maritime moderation supports humid coastal conditions in East Doerna.
+      seasonality:
+        summer_dryness: 0.2
+        winter_wetness: 0.4
+    terrain:
+      elevation_m:
+        min: -2000
+        max: 0
+      ruggedness: 0.2
+      landforms:
+      - name: marine_basin
+        weight: 0.6
+      - name: continental_shelf
+        weight: 0.4
+    hydrology:
+      drainage: coastal
+      seasonality:
+        baseflow_index: 0.95
+        drying_risk_summer: 0.05
+        flood_risk_spring: 0.2
+        freeze_risk_winter: 0.1
+        notes: Stable marine basin with seasonal upwelling and wind-driven circulation.

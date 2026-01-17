@@ -1,0 +1,40 @@
+version: 1
+region:
+  id: 27
+  name: Visidiras
+  kind: land
+  geometry:
+    type: raster_label
+    source: colorcodes_labels.npy
+    value: 27
+    bbox_px:
+    - 20
+    - 175
+    - 210
+    - 469
+  geo:
+    summary: A craggy mountain barrier with steep ridges and narrow passes, strongly shaping precipitation
+      patterns across its flanks.
+    climate:
+      notes: Windward slopes receive forced rainfall; leeward areas are drier.
+      seasonality:
+        summer_dryness: 0.4
+        winter_wetness: 0.6
+    terrain:
+      elevation_m:
+        min: 400
+        max: 3000
+      ruggedness: 0.85
+      landforms:
+      - name: mountain_barrier
+        weight: 0.7
+      - name: narrow_passes
+        weight: 0.3
+    hydrology:
+      drainage: exorheic
+      seasonality:
+        baseflow_index: 0.5
+        drying_risk_summer: 0.3
+        flood_risk_spring: 0.6
+        freeze_risk_winter: 0.6
+        notes: Orographic precipitation drives seasonal runoff contrasts.

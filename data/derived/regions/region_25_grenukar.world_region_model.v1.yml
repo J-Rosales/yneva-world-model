@@ -1,0 +1,40 @@
+version: 1
+region:
+  id: 25
+  name: Grenukar
+  kind: land
+  geometry:
+    type: raster_label
+    source: colorcodes_labels.npy
+    value: 25
+    bbox_px:
+    - 202
+    - 168
+    - 370
+    - 409
+  geo:
+    summary: Cool, hilly terrain with scattered forest clusters and gentle slopes. The climate is stable
+      and moist, supporting mixed woodland and agriculture.
+    climate:
+      notes: Moist, temperate conditions with consistent precipitation.
+      seasonality:
+        summer_dryness: 0.2
+        winter_wetness: 0.5
+    terrain:
+      elevation_m:
+        min: 150
+        max: 900
+      ruggedness: 0.35
+      landforms:
+      - name: gentle_hills
+        weight: 0.6
+      - name: mixed_woodland
+        weight: 0.4
+    hydrology:
+      drainage: exorheic
+      seasonality:
+        baseflow_index: 0.7
+        drying_risk_summer: 0.2
+        flood_risk_spring: 0.4
+        freeze_risk_winter: 0.3
+        notes: Numerous small streams with steady flow.

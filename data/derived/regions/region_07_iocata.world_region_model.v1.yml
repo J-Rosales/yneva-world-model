@@ -1,0 +1,40 @@
+version: 1
+region:
+  id: 7
+  name: Iocata
+  kind: island
+  geometry:
+    type: raster_label
+    source: colorcodes_labels.npy
+    value: 7
+    bbox_px:
+    - 571
+    - 580
+    - 699
+    - 699
+  geo:
+    summary: A high-relief island landmass dominated by rugged mountains and elevated plateaus. Narrow
+      valleys and frequent passes define the terrain.
+    climate:
+      notes: Marine influence keeps margins relatively mild; heavy snowfall persists at higher elevations.
+      seasonality:
+        summer_dryness: 0.3
+        winter_wetness: 0.6
+    terrain:
+      elevation_m:
+        min: 0
+        max: 3200
+      ruggedness: 0.8
+      landforms:
+      - name: mountain_massif
+        weight: 0.6
+      - name: high_plateau
+        weight: 0.4
+    hydrology:
+      drainage: exorheic
+      seasonality:
+        baseflow_index: 0.6
+        drying_risk_summer: 0.2
+        flood_risk_spring: 0.7
+        freeze_risk_winter: 0.7
+        notes: Glacial and nival melt drive strong seasonal runoff.

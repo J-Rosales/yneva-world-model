@@ -1,0 +1,40 @@
+version: 1
+region:
+  id: 10
+  name: Soterne Island North
+  kind: island
+  geometry:
+    type: raster_label
+    source: colorcodes_labels.npy
+    value: 10
+    bbox_px:
+    - 164
+    - 617
+    - 255
+    - 639
+  geo:
+    summary: A mid-sized island with low to moderate relief, surrounded by warm, fast-moving ocean currents.
+      Short rivers drain radially to the coast.
+    climate:
+      notes: High humidity and consistent rainfall; storms are frequent but rarely cold.
+      seasonality:
+        summer_dryness: 0.2
+        winter_wetness: 0.5
+    terrain:
+      elevation_m:
+        min: 0
+        max: 600
+      ruggedness: 0.3
+      landforms:
+      - name: low_hills
+        weight: 0.6
+      - name: coastal_lowlands
+        weight: 0.4
+    hydrology:
+      drainage: coastal
+      seasonality:
+        baseflow_index: 0.6
+        drying_risk_summer: 0.2
+        flood_risk_spring: 0.4
+        freeze_risk_winter: 0.1
+        notes: Short catchments with reliable flow due to steady rainfall.

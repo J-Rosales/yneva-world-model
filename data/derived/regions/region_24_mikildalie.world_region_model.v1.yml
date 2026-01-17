@@ -1,0 +1,40 @@
+version: 1
+region:
+  id: 24
+  name: Mikildalie
+  kind: land
+  geometry:
+    type: raster_label
+    source: colorcodes_labels.npy
+    value: 24
+    bbox_px:
+    - 314
+    - 426
+    - 662
+    - 560
+  geo:
+    summary: A vast expanse of low steppe and rolling hills exposed to strong winds from adjacent seas.
+      Coastal margins experience particularly intense winds.
+    climate:
+      notes: Dry to semi-arid climate with large seasonal temperature swings.
+      seasonality:
+        summer_dryness: 0.6
+        winter_wetness: 0.2
+    terrain:
+      elevation_m:
+        min: 0
+        max: 900
+      ruggedness: 0.35
+      landforms:
+      - name: wind_swept_steppe
+        weight: 0.6
+      - name: rolling_hills
+        weight: 0.4
+    hydrology:
+      drainage: exorheic
+      seasonality:
+        baseflow_index: 0.3
+        drying_risk_summer: 0.6
+        flood_risk_spring: 0.3
+        freeze_risk_winter: 0.4
+        notes: Wind exposure and low precipitation limit baseflow stability.
