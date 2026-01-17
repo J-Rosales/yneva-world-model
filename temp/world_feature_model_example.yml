@@ -1,0 +1,90 @@
+version: 1
+coord_space:
+  name: example_europe
+  note: "Conceptual example; geometry references are placeholders."
+
+features:
+  - id: F_ALPS
+    kind: mountain_range
+    name: Alps
+    tags: [barrier, snow_bound, orographic_precipitation]
+    geometry:
+      type: raster_mask
+      source: features_labels.npy
+      value: 101
+    relations:
+      overlaps_regions:
+        - {region_id: R_N_ITALY, coverage_frac: 0.26}
+        - {region_id: R_SWITZERLAND, coverage_frac: 0.62}
+      affects_climate:
+        - {region_id: R_N_ITALY, effect: rain_shadow_local, strength: 0.55}
+        - {region_id: R_SWITZERLAND, effect: orographic_rain, strength: 0.65}
+
+  - id: F_PO_RIVER
+    kind: river
+    name: Po River
+    tags: [perennial, snowmelt_fed]
+    geometry:
+      type: polyline
+      source: features_po_river.geojson
+      feature_key: po_mainstem
+    hydrology:
+      regime:
+        dominant_source: [snowmelt, rainfall]
+        seasonality:
+          peak_months: [4, 5, 6]
+          low_months: [8, 9]
+          intermittent_reaches: false
+          drying_risk_summer: 0.15
+      navigation:
+        navigable: partial
+        note: "Historically navigable in lower reaches; simplify as needed."
+    relations:
+      crosses_regions:
+        - {region_id: R_N_ITALY, coverage_frac: 0.08}
+
+  - id: F_RHINE_RIVER
+    kind: river
+    name: Rhine River
+    tags: [perennial, glacial_fed]
+    geometry:
+      type: polyline
+      source: features_rhine.geojson
+      feature_key: rhine_mainstem
+    hydrology:
+      regime:
+        dominant_source: [glacial_melt, snowmelt, rainfall]
+        seasonality:
+          peak_months: [5, 6, 7]
+          low_months: [1, 2]
+          intermittent_reaches: false
+          drying_risk_summer: 0.05
+    relations:
+      crosses_regions:
+        - {region_id: R_SWITZERLAND, coverage_frac: 0.05}
+
+  - id: F_GREAT_ST_BERNARD_PASS
+    kind: mountain_pass
+    name: Great St Bernard Pass
+    tags: [corridor, snow_bound]
+    geometry:
+      type: point
+      lon_lat: [7.170, 45.868]
+    traversal:
+      baseline_permeability: 0.65
+      seasonal_modifiers:
+        winter: -0.45
+        summer: 0.0
+        spring: -0.10
+        autumn: -0.05
+    relations:
+      connects_regions: [R_N_ITALY, R_SWITZERLAND]
+
+  - id: F_LAKE_GENEVA
+    kind: lake
+    name: Lake Geneva
+    tags: [perennial]
+    geometry:
+      type: polygon
+      source: features_lakes.geojson
+      feature_key: lake_geneva

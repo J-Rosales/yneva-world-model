@@ -1,0 +1,2959 @@
+schema_version: 1
+map:
+  source: colorcodes_labels.npy
+  width_px: 700
+  height_px: 700
+  outside_id: -1
+  coord_system: x_right_y_down
+  projection: mercator
+  planet_diameter_km: 48000
+  crop_in_landmask_px:
+    top_left:
+    - 1698
+    - 698
+    bottom_right:
+    - 2397
+    - 1397
+classification_rules:
+  adjacency:
+    connectivity: 4
+    min_border_px: 1
+    diagonal_counts: false
+  water:
+    authoritative_water_name_list:
+    - Chrystom
+    - Codhrin
+    - Erdesen Sea
+    - Lacundie Lake
+    - Malstrond
+    - North Sea
+    - Pelagian Sea
+    - Seuwyd
+    - Soterne Sea
+    - Suran Sea
+    sea_threshold:
+      method: relative_to_max_water_area_in_frame
+      max_water_area_px_in_frame: 96255
+      sea_if_area_frac_gte: 0.05
+    misc_black_hex: '000000'
+  island:
+    definition: land region whose adjacent neighbors are all water regions (4-neighborhood)
+regions:
+- id: 0
+  name: Misc bodies of water
+  color_hex: '000000'
+  kind:
+    medium: water
+    water_class: misc
+    island: false
+  extent:
+    area_px: 325
+    perimeter_px4: 288
+    bbox_px:
+      min_x: 43
+      min_y: 185
+      max_x: 609
+      max_y: 430
+    centroid_px:
+      x: 309.3969230769231
+      y: 262.5846153846154
+  truncation:
+    touches_edge: false
+    edge_contact_px:
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+  topology:
+    neighbors:
+    - id: 20
+      border_px: 160
+      direction_contact_px:
+        n: 24
+        e: 16
+        s: 24
+        w: 16
+      centroid_delta_px:
+        dx: 157.16576212322775
+        dy: 96.23457539174365
+    - id: 27
+      border_px: 134
+      direction_contact_px:
+        n: 14
+        e: 20
+        s: 28
+        w: 5
+      centroid_delta_px:
+        dx: -188.47935093064433
+        dy: 74.61605058103481
+    - id: 32
+      border_px: 64
+      direction_contact_px:
+        n: 6
+        e: 10
+        s: 6
+        w: 10
+      centroid_delta_px:
+        dx: 129.47029526912053
+        dy: -94.83930736362996
+    - id: 5
+      border_px: 58
+      direction_contact_px:
+        n: 14
+        e: 0
+        s: 0
+        w: 15
+      centroid_delta_px:
+        dx: -256.5985851757649
+        dy: 40.52854879184997
+    - id: 26
+      border_px: 58
+      direction_contact_px:
+        n: 11
+        e: 6
+        s: 6
+        w: 6
+      centroid_delta_px:
+        dx: 129.2135290461644
+        dy: 0.5813636423744697
+    - id: 31
+      border_px: 44
+      direction_contact_px:
+        n: 8
+        e: 7
+        s: 5
+        w: 2
+      centroid_delta_px:
+        dx: 270.948396446235
+        dy: 2.230119811788711
+    - id: 29
+      border_px: 32
+      direction_contact_px:
+        n: 4
+        e: 4
+        s: 4
+        w: 4
+      centroid_delta_px:
+        dx: 311.698034004622
+        dy: -52.70854242324202
+    - id: 35
+      border_px: 26
+      direction_contact_px:
+        n: 0
+        e: 0
+        s: 8
+        w: 5
+      centroid_delta_px:
+        dx: 137.3507992658101
+        dy: 50.58241281495077
+    outside_border_px: 0
+  geo: {}
+  notes: []
+- id: 1
+  name: Pelagian Sea
+  color_hex: 00625d
+  kind:
+    medium: water
+    water_class: sea
+    island: false
+  extent:
+    area_px: 6753
+    perimeter_px4: 620
+    bbox_px:
+      min_x: 0
+      min_y: 0
+      max_x: 57
+      max_y: 249
+    centroid_px:
+      x: 16.46023989338072
+      y: 142.6010661928032
+  truncation:
+    touches_edge: true
+    edge_contact_px:
+      top: 2
+      right: 0
+      bottom: 0
+      left: 250
+  topology:
+    neighbors:
+    - id: 30
+      border_px: 458
+      direction_contact_px:
+        n: 56
+        e: 173
+        s: 0
+        w: 0
+      centroid_delta_px:
+        dx: 294.5233349858463
+        dy: -60.56180589463686
+    - id: 5
+      border_px: 278
+      direction_contact_px:
+        n: 2
+        e: 77
+        s: 60
+        w: 0
+      centroid_delta_px:
+        dx: 36.33809800777745
+        dy: 160.5120979836622
+    outside_border_px: 252
+  geo: {}
+  notes: []
+- id: 2
+  name: Lacundie Lake
+  color_hex: 00d42e
+  kind:
+    medium: water
+    water_class: lake
+    island: false
+  extent:
+    area_px: 482
+    perimeter_px4: 212
+    bbox_px:
+      min_x: 330
+      min_y: 400
+      max_x: 390
+      max_y: 426
+    centroid_px:
+      x: 362.39834024896265
+      y: 410.2883817427386
+  truncation:
+    touches_edge: false
+    edge_contact_px:
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+  topology:
+    neighbors:
+    - id: 11
+      border_px: 424
+      direction_contact_px:
+        n: 67
+        e: 39
+        s: 67
+        w: 39
+      centroid_delta_px:
+        dx: 7.597234120866119
+        dy: 23.307731399458817
+    outside_border_px: 0
+  geo: {}
+  notes: []
+- id: 3
+  name: Erdesen Sea
+  color_hex: 0b5b6b
+  kind:
+    medium: water
+    water_class: sea
+    island: false
+  extent:
+    area_px: 17393
+    perimeter_px4: 930
+    bbox_px:
+      min_x: 598
+      min_y: 238
+      max_x: 699
+      max_y: 504
+    centroid_px:
+      x: 661.1988731098718
+      y: 380.92002529753347
+  truncation:
+    touches_edge: true
+    edge_contact_px:
+      top: 0
+      right: 243
+      bottom: 0
+      left: 0
+  topology:
+    neighbors:
+    - id: 23
+      border_px: 488
+      direction_contact_px:
+        n: 14
+        e: 18
+        s: 79
+        w: 133
+      centroid_delta_px:
+        dx: -103.27954870056442
+        dy: 37.013224185891204
+    - id: 9
+      border_px: 370
+      direction_contact_px:
+        n: 65
+        e: 14
+        s: 22
+        w: 84
+      centroid_delta_px:
+        dx: -28.252510921873863
+        dy: -36.56739651367792
+    - id: 12
+      border_px: 158
+      direction_contact_px:
+        n: 59
+        e: 12
+        s: 0
+        w: 8
+      centroid_delta_px:
+        dx: 1.811663896602795
+        dy: -244.67564291845514
+    - id: 31
+      border_px: 146
+      direction_contact_px:
+        n: 8
+        e: 0
+        s: 16
+        w: 49
+      centroid_delta_px:
+        dx: -80.8535535867137
+        dy: -116.10529010112936
+    - id: 4
+      border_px: 106
+      direction_contact_px:
+        n: 0
+        e: 20
+        s: 33
+        w: 0
+      centroid_delta_px:
+        dx: -18.55473569388971
+        dy: 186.56046387348965
+    - id: 29
+      border_px: 62
+      direction_contact_px:
+        n: 8
+        e: 0
+        s: 6
+        w: 17
+      centroid_delta_px:
+        dx: -40.103916028326694
+        dy: -171.0439523361601
+    - id: 20
+      border_px: 44
+      direction_contact_px:
+        n: 4
+        e: 0
+        s: 2
+        w: 16
+      centroid_delta_px:
+        dx: -194.63618790972095
+        dy: -22.10083452117442
+    outside_border_px: 243
+  geo: {}
+  notes: []
+- id: 4
+  name: Chrystom
+  color_hex: '104941'
+  kind:
+    medium: water
+    water_class: sea
+    island: false
+  extent:
+    area_px: 10712
+    perimeter_px4: 1058
+    bbox_px:
+      min_x: 559
+      min_y: 485
+      max_x: 699
+      max_y: 699
+    centroid_px:
+      x: 642.6441374159821
+      y: 567.4804891710231
+  truncation:
+    touches_edge: true
+    edge_contact_px:
+      top: 0
+      right: 95
+      bottom: 12
+      left: 0
+  topology:
+    neighbors:
+    - id: 7
+      border_px: 750
+      direction_contact_px:
+        n: 47
+        e: 136
+        s: 176
+        w: 16
+      centroid_delta_px:
+        dx: 8.943844514893044
+        dy: 87.0899489002029
+    - id: 19
+      border_px: 714
+      direction_contact_px:
+        n: 86
+        e: 17
+        s: 80
+        w: 174
+      centroid_delta_px:
+        dx: -95.95643436766522
+        dy: 47.13193911403948
+    - id: 24
+      border_px: 288
+      direction_contact_px:
+        n: 94
+        e: 12
+        s: 0
+        w: 38
+      centroid_delta_px:
+        dx: -172.95907373400598
+        dy: -70.44199929347496
+    - id: 3
+      border_px: 106
+      direction_contact_px:
+        n: 33
+        e: 0
+        s: 0
+        w: 20
+      centroid_delta_px:
+        dx: 18.55473569388971
+        dy: -186.56046387348965
+    - id: 13
+      border_px: 24
+      direction_contact_px:
+        n: 4
+        e: 0
+        s: 0
+        w: 8
+      centroid_delta_px:
+        dx: -173.61831463117193
+        dy: 120.25520703150858
+    - id: 23
+      border_px: 20
+      direction_contact_px:
+        n: 5
+        e: 0
+        s: 1
+        w: 4
+      centroid_delta_px:
+        dx: -84.72481300667471
+        dy: -149.54723968759845
+    outside_border_px: 107
+  geo: {}
+  notes: []
+- id: 5
+  name: East Doerna
+  color_hex: 191b31
+  kind:
+    medium: land
+    water_class: null
+    island: false
+  extent:
+    area_px: 22622
+    perimeter_px4: 950
+    bbox_px:
+      min_x: 0
+      min_y: 173
+      max_x: 126
+      max_y: 460
+    centroid_px:
+      x: 52.79833790115816
+      y: 303.1131641764654
+  truncation:
+    touches_edge: true
+    edge_contact_px:
+      top: 0
+      right: 0
+      bottom: 0
+      left: 211
+  topology:
+    neighbors:
+    - id: 27
+      border_px: 910
+      direction_contact_px:
+        n: 74
+        e: 258
+        s: 122
+        w: 1
+      centroid_delta_px:
+        dx: 68.11923424512061
+        dy: 34.08750178918484
+    - id: 1
+      border_px: 278
+      direction_contact_px:
+        n: 60
+        e: 0
+        s: 2
+        w: 77
+      centroid_delta_px:
+        dx: -36.33809800777745
+        dy: -160.5120979836622
+    - id: 28
+      border_px: 158
+      direction_contact_px:
+        n: 8
+        e: 26
+        s: 28
+        w: 17
+      centroid_delta_px:
+        dx: 110.38785970717714
+        dy: 298.55383795472096
+    - id: 30
+      border_px: 74
+      direction_contact_px:
+        n: 24
+        e: 10
+        s: 0
+        w: 3
+      centroid_delta_px:
+        dx: 258.1852369780689
+        dy: -221.07390387829906
+    - id: 0
+      border_px: 58
+      direction_contact_px: &id001
+        n: 0
+        e: 15
+        s: 14
+        w: 0
+      centroid_delta_px:
+        dx: 256.5985851757649
+        dy: -40.52854879184997
+    outside_border_px: 211
+    misc_water_contact:
+      misc_region_id: 0
+      border_px: 58
+      direction_contact_px: *id001
+  geo: {}
+  notes: []
+- id: 6
+  name: Norvik
+  color_hex: 1c292b
+  kind:
+    medium: land
+    water_class: null
+    island: false
+  extent:
+    area_px: 600
+    perimeter_px4: 222
+    bbox_px:
+      min_x: 144
+      min_y: 257
+      max_x: 182
+      max_y: 310
+    centroid_px:
+      x: 154.78666666666666
+      y: 287.36833333333334
+  truncation:
+    touches_edge: false
+    edge_contact_px:
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+  topology:
+    neighbors:
+    - id: 27
+      border_px: 288
+      direction_contact_px:
+        n: 19
+        e: 34
+        s: 37
+        w: 54
+      centroid_delta_px:
+        dx: -33.86909452038789
+        dy: 49.83233263231688
+    - id: 30
+      border_px: 156
+      direction_contact_px:
+        n: 26
+        e: 32
+        s: 8
+        w: 12
+      centroid_delta_px:
+        dx: 156.19690821256037
+        dy: -205.32907303516703
+    outside_border_px: 0
+  geo: {}
+  notes: []
+- id: 7
+  name: Iocata
+  color_hex: 1e132b
+  kind:
+    medium: land
+    water_class: null
+    island: true
+  extent:
+    area_px: 9519
+    perimeter_px4: 624
+    bbox_px:
+      min_x: 571
+      min_y: 580
+      max_x: 699
+      max_y: 699
+    centroid_px:
+      x: 651.5879819308751
+      y: 654.570438071226
+  truncation:
+    touches_edge: true
+    edge_contact_px:
+      top: 0
+      right: 120
+      bottom: 129
+      left: 0
+  topology:
+    neighbors:
+    - id: 4
+      border_px: 750
+      direction_contact_px:
+        n: 176
+        e: 16
+        s: 47
+        w: 136
+      centroid_delta_px:
+        dx: -8.943844514893044
+        dy: -87.0899489002029
+    outside_border_px: 249
+  geo: {}
+  notes: []
+- id: 8
+  name: Codhrin
+  color_hex: '254910'
+  kind:
+    medium: water
+    water_class: lake
+    island: false
+  extent:
+    area_px: 444
+    perimeter_px4: 210
+    bbox_px:
+      min_x: 495
+      min_y: 535
+      max_x: 568
+      max_y: 561
+    centroid_px:
+      x: 529.0765765765766
+      y: 547.9436936936937
+  truncation:
+    touches_edge: false
+    edge_contact_px:
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+  topology:
+    neighbors:
+    - id: 24
+      border_px: 170
+      direction_contact_px:
+        n: 67
+        e: 0
+        s: 0
+        w: 18
+      centroid_delta_px:
+        dx: -59.39151289460051
+        dy: -50.90520381614556
+    - id: 19
+      border_px: 140
+      direction_contact_px:
+        n: 0
+        e: 25
+        s: 45
+        w: 0
+      centroid_delta_px:
+        dx: 17.61112647174025
+        dy: 66.66873459136889
+    - id: 21
+      border_px: 110
+      direction_contact_px:
+        n: 7
+        e: 6
+        s: 29
+        w: 13
+      centroid_delta_px:
+        dx: -114.10171373926835
+        dy: 55.79155431884692
+    outside_border_px: 0
+  geo: {}
+  notes: []
+- id: 9
+  name: Ositeppe
+  color_hex: 256e29
+  kind:
+    medium: land
+    water_class: null
+    island: false
+  extent:
+    area_px: 1883
+    perimeter_px4: 316
+    bbox_px:
+      min_x: 602
+      min_y: 313
+      max_x: 666
+      max_y: 389
+    centroid_px:
+      x: 632.9463621879979
+      y: 344.35262878385555
+  truncation:
+    touches_edge: false
+    edge_contact_px:
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+  topology:
+    neighbors:
+    - id: 3
+      border_px: 370
+      direction_contact_px:
+        n: 22
+        e: 84
+        s: 65
+        w: 14
+      centroid_delta_px:
+        dx: 28.252510921873863
+        dy: 36.56739651367792
+    - id: 23
+      border_px: 160
+      direction_contact_px:
+        n: 17
+        e: 0
+        s: 2
+        w: 61
+      centroid_delta_px:
+        dx: -75.02703777869056
+        dy: 73.58062069956912
+    - id: 20
+      border_px: 102
+      direction_contact_px:
+        n: 28
+        e: 7
+        s: 0
+        w: 16
+      centroid_delta_px:
+        dx: -166.38367698784708
+        dy: 14.4665619925035
+    outside_border_px: 0
+  geo: {}
+  notes: []
+- id: 10
+  name: Soterne Island North
+  color_hex: 2c3119
+  kind:
+    medium: land
+    water_class: null
+    island: true
+  extent:
+    area_px: 915
+    perimeter_px4: 234
+    bbox_px:
+      min_x: 164
+      min_y: 617
+      max_x: 255
+      max_y: 639
+    centroid_px:
+      x: 211.2032786885246
+      y: 631.6622950819672
+  truncation:
+    touches_edge: false
+    edge_contact_px:
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+  topology:
+    neighbors:
+    - id: 28
+      border_px: 468
+      direction_contact_px:
+        n: 92
+        e: 25
+        s: 92
+        w: 25
+      centroid_delta_px:
+        dx: -48.017081080189286
+        dy: -29.995292950780822
+    outside_border_px: 0
+  geo: {}
+  notes: []
+- id: 11
+  name: Lacundie
+  color_hex: 2d575e
+  kind:
+    medium: land
+    water_class: null
+    island: false
+  extent:
+    area_px: 5197
+    perimeter_px4: 606
+    bbox_px:
+      min_x: 313
+      min_y: 395
+      max_x: 427
+      max_y: 471
+    centroid_px:
+      x: 369.9955743698288
+      y: 433.5961131421974
+  truncation:
+    touches_edge: false
+    edge_contact_px:
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+  topology:
+    neighbors:
+    - id: 2
+      border_px: 424
+      direction_contact_px:
+        n: 67
+        e: 39
+        s: 67
+        w: 39
+      centroid_delta_px:
+        dx: -7.597234120866119
+        dy: -23.307731399458817
+    - id: 18
+      border_px: 316
+      direction_contact_px:
+        n: 5
+        e: 1
+        s: 84
+        w: 68
+      centroid_delta_px:
+        dx: -116.89125661907568
+        dy: 33.84977551115526
+    - id: 20
+      border_px: 234
+      direction_contact_px:
+        n: 82
+        e: 23
+        s: 0
+        w: 12
+      centroid_delta_px:
+        dx: 96.56711083032206
+        dy: -74.77692236583835
+    - id: 24
+      border_px: 154
+      direction_contact_px:
+        n: 2
+        e: 42
+        s: 33
+        w: 0
+      centroid_delta_px:
+        dx: 99.68948931214732
+        dy: 63.44237673535076
+    - id: 23
+      border_px: 84
+      direction_contact_px:
+        n: 28
+        e: 14
+        s: 0
+        w: 0
+      centroid_delta_px:
+        dx: 187.9237500394786
+        dy: -15.662863658772721
+    outside_border_px: 0
+  geo: {}
+  notes: []
+- id: 12
+  name: Malstrond
+  color_hex: 2e4323
+  kind:
+    medium: water
+    water_class: sea
+    island: false
+  extent:
+    area_px: 15754
+    perimeter_px4: 684
+    bbox_px:
+      min_x: 607
+      min_y: 2
+      max_x: 699
+      max_y: 249
+    centroid_px:
+      x: 663.0105370064746
+      y: 136.24438237907833
+  truncation:
+    touches_edge: true
+    edge_contact_px:
+      top: 0
+      right: 240
+      bottom: 0
+      left: 0
+  topology:
+    neighbors:
+    - id: 30
+      border_px: 518
+      direction_contact_px:
+        n: 93
+        e: 0
+        s: 5
+        w: 161
+      centroid_delta_px:
+        dx: -352.02696212724754
+        dy: -54.205122080912005
+    - id: 29
+      border_px: 212
+      direction_contact_px:
+        n: 0
+        e: 1
+        s: 29
+        w: 76
+      centroid_delta_px:
+        dx: -41.91557992492949
+        dy: 73.63169058229505
+    - id: 3
+      border_px: 158
+      direction_contact_px:
+        n: 0
+        e: 8
+        s: 59
+        w: 12
+      centroid_delta_px:
+        dx: -1.811663896602795
+        dy: 244.67564291845514
+    outside_border_px: 240
+  geo: {}
+  notes: []
+- id: 13
+  name: Suran Sea
+  color_hex: 2f1049
+  kind:
+    medium: water
+    water_class: lake
+    island: false
+  extent:
+    area_px: 3950
+    perimeter_px4: 476
+    bbox_px:
+      min_x: 373
+      min_y: 668
+      max_x: 562
+      max_y: 699
+    centroid_px:
+      x: 469.02582278481015
+      y: 687.7356962025317
+  truncation:
+    touches_edge: true
+    edge_contact_px:
+      top: 0
+      right: 0
+      bottom: 186
+      left: 0
+  topology:
+    neighbors:
+    - id: 19
+      border_px: 350
+      direction_contact_px:
+        n: 129
+        e: 32
+        s: 0
+        w: 14
+      centroid_delta_px:
+        dx: 77.6618802635067
+        dy: -73.1232679174691
+    - id: 21
+      border_px: 136
+      direction_contact_px:
+        n: 43
+        e: 8
+        s: 0
+        w: 17
+      centroid_delta_px:
+        dx: -54.050959947501894
+        dy: -84.00044818999106
+    - id: 28
+      border_px: 70
+      direction_contact_px:
+        n: 18
+        e: 0
+        s: 0
+        w: 17
+      centroid_delta_px:
+        dx: -305.83962517647484
+        dy: -86.06869407134536
+    - id: 4
+      border_px: 24
+      direction_contact_px:
+        n: 0
+        e: 8
+        s: 4
+        w: 0
+      centroid_delta_px:
+        dx: 173.61831463117193
+        dy: -120.25520703150858
+    outside_border_px: 186
+  geo: {}
+  notes: []
+- id: 14
+  name: Seuwyd
+  color_hex: '449358'
+  kind:
+    medium: water
+    water_class: sea
+    island: false
+  extent:
+    area_px: 11148
+    perimeter_px4: 812
+    bbox_px:
+      min_x: 100
+      min_y: 328
+      max_x: 255
+      max_y: 489
+    centroid_px:
+      x: 181.5249372084679
+      y: 400.43702906350916
+  truncation:
+    touches_edge: false
+    edge_contact_px:
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+  topology:
+    neighbors:
+    - id: 27
+      border_px: 562
+      direction_contact_px:
+        n: 125
+        e: 16
+        s: 23
+        w: 117
+      centroid_delta_px:
+        dx: -60.60736506218912
+        dy: -63.23636309785894
+    - id: 18
+      border_px: 518
+      direction_contact_px:
+        n: 13
+        e: 86
+        s: 152
+        w: 8
+      centroid_delta_px:
+        dx: 71.57938054228521
+        dy: 67.0088595898435
+    - id: 25
+      border_px: 280
+      direction_contact_px:
+        n: 58
+        e: 76
+        s: 4
+        w: 2
+      centroid_delta_px:
+        dx: 113.8499027129869
+        dy: -99.28553072832602
+    - id: 34
+      border_px: 264
+      direction_contact_px:
+        n: 32
+        e: 0
+        s: 49
+        w: 51
+      centroid_delta_px:
+        dx: -87.87652731447496
+        dy: 72.18605692000085
+    outside_border_px: 0
+  geo: {}
+  notes: []
+- id: 15
+  name: Sersidhe
+  color_hex: 4a61c7
+  kind:
+    medium: land
+    water_class: null
+    island: false
+  extent:
+    area_px: 13575
+    perimeter_px4: 758
+    bbox_px:
+      min_x: 194
+      min_y: 107
+      max_x: 326
+      max_y: 287
+    centroid_px:
+      x: 258.36279926335175
+      y: 189.27513812154697
+  truncation:
+    touches_edge: false
+    edge_contact_px:
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+  topology:
+    neighbors:
+    - id: 30
+      border_px: 956
+      direction_contact_px:
+        n: 163
+        e: 89
+        s: 36
+        w: 190
+      centroid_delta_px:
+        dx: 52.62077561587529
+        dy: -107.23587782338065
+    - id: 25
+      border_px: 492
+      direction_contact_px:
+        n: 0
+        e: 127
+        s: 112
+        w: 7
+      centroid_delta_px:
+        dx: 37.01204065810305
+        dy: 111.87636021363616
+    - id: 27
+      border_px: 68
+      direction_contact_px:
+        n: 0
+        e: 0
+        s: 15
+        w: 19
+      centroid_delta_px:
+        dx: -137.445227117073
+        dy: 147.92552784410324
+    outside_border_px: 0
+  geo: {}
+  notes: []
+- id: 16
+  name: Orodwydd
+  color_hex: 4aa2c7
+  kind:
+    medium: land
+    water_class: null
+    island: false
+  extent:
+    area_px: 2704
+    perimeter_px4: 282
+    bbox_px:
+      min_x: 476
+      min_y: 194
+      max_x: 536
+      max_y: 267
+    centroid_px:
+      x: 505.4940828402367
+      y: 227.31952662721895
+  truncation:
+    touches_edge: false
+    edge_contact_px:
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+  topology:
+    neighbors:
+    - id: 26
+      border_px: 210
+      direction_contact_px:
+        n: 6
+        e: 0
+        s: 57
+        w: 42
+      centroid_delta_px:
+        dx: -66.88363071714917
+        dy: 35.846452399770925
+    - id: 32
+      border_px: 194
+      direction_contact_px:
+        n: 47
+        e: 12
+        s: 6
+        w: 32
+      centroid_delta_px:
+        dx: -66.62686449419306
+        dy: -59.5742186062335
+    - id: 31
+      border_px: 160
+      direction_contact_px:
+        n: 14
+        e: 62
+        s: 4
+        w: 0
+      centroid_delta_px:
+        dx: 74.85123668292141
+        dy: 37.495208569185166
+    outside_border_px: 0
+  geo: {}
+  notes: []
+- id: 17
+  name: Feynman Island
+  color_hex: 4ab9c7
+  kind:
+    medium: land
+    water_class: null
+    island: true
+  extent:
+    area_px: 1124
+    perimeter_px4: 270
+    bbox_px:
+      min_x: 469
+      min_y: 60
+      max_x: 515
+      max_y: 112
+    centroid_px:
+      x: 491.5355871886121
+      y: 86.90213523131672
+  truncation:
+    touches_edge: false
+    edge_contact_px:
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+  topology:
+    neighbors:
+    - id: 30
+      border_px: 540
+      direction_contact_px:
+        n: 63
+        e: 72
+        s: 63
+        w: 72
+      centroid_delta_px:
+        dx: -180.55201230938508
+        dy: -4.862874933150394
+    outside_border_px: 0
+  geo: {}
+  notes: []
+- id: 18
+  name: Erisdon
+  color_hex: 4d4638
+  kind:
+    medium: land
+    water_class: null
+    island: false
+  extent:
+    area_px: 17926
+    perimeter_px4: 970
+    bbox_px:
+      min_x: 111
+      min_y: 391
+      max_x: 396
+      max_y: 542
+    centroid_px:
+      x: 253.1043177507531
+      y: 467.44588865335265
+  truncation:
+    touches_edge: false
+    edge_contact_px:
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+  topology:
+    neighbors:
+    - id: 28
+      border_px: 536
+      direction_contact_px:
+        n: 0
+        e: 2
+        s: 219
+        w: 47
+      centroid_delta_px:
+        dx: -89.91812014241779
+        dy: 134.22111347783368
+    - id: 14
+      border_px: 518
+      direction_contact_px:
+        n: 152
+        e: 8
+        s: 13
+        w: 86
+      centroid_delta_px:
+        dx: -71.57938054228521
+        dy: -67.0088595898435
+    - id: 24
+      border_px: 348
+      direction_contact_px:
+        n: 16
+        e: 73
+        s: 83
+        w: 2
+      centroid_delta_px:
+        dx: 216.580745931223
+        dy: 29.592601224195505
+    - id: 11
+      border_px: 316
+      direction_contact_px:
+        n: 84
+        e: 68
+        s: 5
+        w: 1
+      centroid_delta_px:
+        dx: 116.89125661907568
+        dy: -33.84977551115526
+    - id: 25
+      border_px: 144
+      direction_contact_px:
+        n: 53
+        e: 0
+        s: 0
+        w: 19
+      centroid_delta_px:
+        dx: 42.270522170701696
+        dy: -166.29439031816952
+    - id: 20
+      border_px: 46
+      direction_contact_px:
+        n: 9
+        e: 14
+        s: 0
+        w: 0
+      centroid_delta_px:
+        dx: 213.45836744939774
+        dy: -108.6266978769936
+    - id: 34
+      border_px: 32
+      direction_contact_px:
+        n: 6
+        e: 0
+        s: 0
+        w: 10
+      centroid_delta_px:
+        dx: -159.45590785676018
+        dy: 5.177197330157355
+    outside_border_px: 0
+  geo: {}
+  notes: []
+- id: 19
+  name: Bosphyr
+  color_hex: 4d6e7d
+  kind:
+    medium: land
+    water_class: null
+    island: false
+  extent:
+    area_px: 14467
+    perimeter_px4: 832
+    bbox_px:
+      min_x: 434
+      min_y: 533
+      max_x: 638
+      max_y: 692
+    centroid_px:
+      x: 546.6877030483168
+      y: 614.6124282850626
+  truncation:
+    touches_edge: false
+    edge_contact_px:
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+  topology:
+    neighbors:
+    - id: 4
+      border_px: 714
+      direction_contact_px:
+        n: 80
+        e: 174
+        s: 86
+        w: 17
+      centroid_delta_px:
+        dx: 95.95643436766522
+        dy: -47.13193911403948
+    - id: 21
+      border_px: 460
+      direction_contact_px:
+        n: 103
+        e: 0
+        s: 13
+        w: 114
+      centroid_delta_px:
+        dx: -131.7128402110086
+        dy: -10.877180272521969
+    - id: 13
+      border_px: 350
+      direction_contact_px:
+        n: 0
+        e: 14
+        s: 129
+        w: 32
+      centroid_delta_px:
+        dx: -77.6618802635067
+        dy: 73.1232679174691
+    - id: 8
+      border_px: 140
+      direction_contact_px:
+        n: 45
+        e: 0
+        s: 0
+        w: 25
+      centroid_delta_px:
+        dx: -17.61112647174025
+        dy: -66.66873459136889
+    outside_border_px: 0
+  geo: {}
+  notes: []
+- id: 20
+  name: Sudrgordel
+  color_hex: 6e256d
+  kind:
+    medium: land
+    water_class: null
+    island: false
+  extent:
+    area_px: 18561
+    perimeter_px4: 1266
+    bbox_px:
+      min_x: 309
+      min_y: 290
+      max_x: 646
+      max_y: 415
+    centroid_px:
+      x: 466.56268520015084
+      y: 358.81919077635905
+  truncation:
+    touches_edge: false
+    edge_contact_px:
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+  topology:
+    neighbors:
+    - id: 23
+      border_px: 620
+      direction_contact_px:
+        n: 2
+        e: 88
+        s: 219
+        w: 1
+      centroid_delta_px:
+        dx: 91.35663920915653
+        dy: 59.114058707065624
+    - id: 35
+      border_px: 584
+      direction_contact_px:
+        n: 192
+        e: 42
+        s: 5
+        w: 53
+      centroid_delta_px:
+        dx: -19.81496285741764
+        dy: -45.652162576792875
+    - id: 31
+      border_px: 388
+      direction_contact_px:
+        n: 112
+        e: 47
+        s: 0
+        w: 35
+      centroid_delta_px:
+        dx: 113.78263432300724
+        dy: -94.00445557995494
+    - id: 25
+      border_px: 354
+      direction_contact_px:
+        n: 64
+        e: 0
+        s: 25
+        w: 88
+      centroid_delta_px:
+        dx: -171.18784527869605
+        dy: -57.667692441175916
+    - id: 11
+      border_px: 234
+      direction_contact_px:
+        n: 0
+        e: 12
+        s: 82
+        w: 23
+      centroid_delta_px:
+        dx: -96.56711083032206
+        dy: 74.77692236583835
+    - id: 0
+      border_px: 160
+      direction_contact_px: &id002
+        n: 24
+        e: 16
+        s: 24
+        w: 16
+      centroid_delta_px:
+        dx: -157.16576212322775
+        dy: -96.23457539174365
+    - id: 9
+      border_px: 102
+      direction_contact_px:
+        n: 0
+        e: 16
+        s: 28
+        w: 7
+      centroid_delta_px:
+        dx: 166.38367698784708
+        dy: -14.4665619925035
+    - id: 18
+      border_px: 46
+      direction_contact_px:
+        n: 0
+        e: 0
+        s: 9
+        w: 14
+      centroid_delta_px:
+        dx: -213.45836744939774
+        dy: 108.6266978769936
+    - id: 3
+      border_px: 44
+      direction_contact_px:
+        n: 2
+        e: 16
+        s: 4
+        w: 0
+      centroid_delta_px:
+        dx: 194.63618790972095
+        dy: 22.10083452117442
+    outside_border_px: 0
+    misc_water_contact:
+      misc_region_id: 0
+      border_px: 160
+      direction_contact_px: *id002
+  geo: {}
+  notes: []
+- id: 21
+  name: Aloppin
+  color_hex: 737d4d
+  kind:
+    medium: land
+    water_class: null
+    island: false
+  extent:
+    area_px: 17862
+    perimeter_px4: 818
+    bbox_px:
+      min_x: 303
+      min_y: 546
+      max_x: 531
+      max_y: 682
+    centroid_px:
+      x: 414.97486283730825
+      y: 603.7352480125406
+  truncation:
+    touches_edge: false
+    edge_contact_px:
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+  topology:
+    neighbors:
+    - id: 28
+      border_px: 540
+      direction_contact_px:
+        n: 31
+        e: 6
+        s: 90
+        w: 143
+      centroid_delta_px:
+        dx: -251.78866522897295
+        dy: -2.0682458813543008
+    - id: 19
+      border_px: 460
+      direction_contact_px:
+        n: 13
+        e: 114
+        s: 103
+        w: 0
+      centroid_delta_px:
+        dx: 131.7128402110086
+        dy: 10.877180272521969
+    - id: 24
+      border_px: 390
+      direction_contact_px:
+        n: 170
+        e: 16
+        s: 0
+        w: 9
+      centroid_delta_px:
+        dx: 54.71020084466784
+        dy: -106.69675813499248
+    - id: 13
+      border_px: 136
+      direction_contact_px:
+        n: 0
+        e: 17
+        s: 43
+        w: 8
+      centroid_delta_px:
+        dx: 54.050959947501894
+        dy: 84.00044818999106
+    - id: 8
+      border_px: 110
+      direction_contact_px:
+        n: 29
+        e: 13
+        s: 7
+        w: 6
+      centroid_delta_px:
+        dx: 114.10171373926835
+        dy: -55.79155431884692
+    outside_border_px: 0
+  geo: {}
+  notes: []
+- id: 22
+  name: Soterne Island South
+  color_hex: '748926'
+  kind:
+    medium: land
+    water_class: null
+    island: true
+  extent:
+    area_px: 278
+    perimeter_px4: 98
+    bbox_px:
+      min_x: 137
+      min_y: 644
+      max_x: 167
+      max_y: 661
+    centroid_px:
+      x: 151.6978417266187
+      y: 652.0107913669065
+  truncation:
+    touches_edge: false
+    edge_contact_px:
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+  topology:
+    neighbors:
+    - id: 28
+      border_px: 196
+      direction_contact_px:
+        n: 31
+        e: 18
+        s: 31
+        w: 18
+      centroid_delta_px:
+        dx: 11.488355881716615
+        dy: -50.34378923572012
+    outside_border_px: 0
+  geo: {}
+  notes: []
+- id: 23
+  name: Odebyord
+  color_hex: 757d54
+  kind:
+    medium: land
+    water_class: null
+    island: false
+  extent:
+    area_px: 11131
+    perimeter_px4: 1014
+    bbox_px:
+      min_x: 400
+      min_y: 329
+      max_x: 666
+      max_y: 508
+    centroid_px:
+      x: 557.9193244093074
+      y: 417.9332494834247
+  truncation:
+    touches_edge: false
+    edge_contact_px:
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+  topology:
+    neighbors:
+    - id: 24
+      border_px: 656
+      direction_contact_px:
+        n: 0
+        e: 7
+        s: 235
+        w: 86
+      centroid_delta_px:
+        dx: -88.23426072733128
+        dy: 79.10524039412348
+    - id: 20
+      border_px: 620
+      direction_contact_px:
+        n: 219
+        e: 1
+        s: 2
+        w: 88
+      centroid_delta_px:
+        dx: -91.35663920915653
+        dy: -59.114058707065624
+    - id: 3
+      border_px: 488
+      direction_contact_px:
+        n: 79
+        e: 133
+        s: 14
+        w: 18
+      centroid_delta_px:
+        dx: 103.27954870056442
+        dy: -37.013224185891204
+    - id: 9
+      border_px: 160
+      direction_contact_px:
+        n: 2
+        e: 61
+        s: 17
+        w: 0
+      centroid_delta_px:
+        dx: 75.02703777869056
+        dy: -73.58062069956912
+    - id: 11
+      border_px: 84
+      direction_contact_px:
+        n: 0
+        e: 0
+        s: 28
+        w: 14
+      centroid_delta_px:
+        dx: -187.9237500394786
+        dy: 15.662863658772721
+    - id: 4
+      border_px: 20
+      direction_contact_px:
+        n: 1
+        e: 4
+        s: 5
+        w: 0
+      centroid_delta_px:
+        dx: 84.72481300667471
+        dy: 149.54723968759845
+    outside_border_px: 0
+  geo: {}
+  notes: []
+- id: 24
+  name: Mikildalie
+  color_hex: 7c9989
+  kind:
+    medium: land
+    water_class: null
+    island: false
+  extent:
+    area_px: 28501
+    perimeter_px4: 1008
+    bbox_px:
+      min_x: 314
+      min_y: 426
+      max_x: 662
+      max_y: 560
+    centroid_px:
+      x: 469.6850636819761
+      y: 497.03848987754816
+  truncation:
+    touches_edge: false
+    edge_contact_px:
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+  topology:
+    neighbors:
+    - id: 23
+      border_px: 656
+      direction_contact_px:
+        n: 235
+        e: 86
+        s: 0
+        w: 7
+      centroid_delta_px:
+        dx: 88.23426072733128
+        dy: -79.10524039412348
+    - id: 21
+      border_px: 390
+      direction_contact_px:
+        n: 0
+        e: 9
+        s: 170
+        w: 16
+      centroid_delta_px:
+        dx: -54.71020084466784
+        dy: 106.69675813499248
+    - id: 18
+      border_px: 348
+      direction_contact_px:
+        n: 83
+        e: 2
+        s: 16
+        w: 73
+      centroid_delta_px:
+        dx: -216.580745931223
+        dy: -29.592601224195505
+    - id: 4
+      border_px: 288
+      direction_contact_px:
+        n: 0
+        e: 38
+        s: 94
+        w: 12
+      centroid_delta_px:
+        dx: 172.95907373400598
+        dy: 70.44199929347496
+    - id: 8
+      border_px: 170
+      direction_contact_px:
+        n: 0
+        e: 18
+        s: 67
+        w: 0
+      centroid_delta_px:
+        dx: 59.39151289460051
+        dy: 50.90520381614556
+    - id: 11
+      border_px: 154
+      direction_contact_px:
+        n: 33
+        e: 0
+        s: 2
+        w: 42
+      centroid_delta_px:
+        dx: -99.68948931214732
+        dy: -63.44237673535076
+    - id: 28
+      border_px: 10
+      direction_contact_px:
+        n: 0
+        e: 0
+        s: 2
+        w: 3
+      centroid_delta_px:
+        dx: -306.4988660736408
+        dy: 104.62851225363818
+    outside_border_px: 0
+  geo: {}
+  notes: []
+- id: 25
+  name: Grenukar
+  color_hex: 826c3d
+  kind:
+    medium: land
+    water_class: null
+    island: false
+  extent:
+    area_px: 23426
+    perimeter_px4: 950
+    bbox_px:
+      min_x: 202
+      min_y: 168
+      max_x: 370
+      max_y: 409
+    centroid_px:
+      x: 295.3748399214548
+      y: 301.15149833518313
+  truncation:
+    touches_edge: false
+    edge_contact_px:
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+  topology:
+    neighbors:
+    - id: 15
+      border_px: 492
+      direction_contact_px:
+        n: 112
+        e: 7
+        s: 0
+        w: 127
+      centroid_delta_px:
+        dx: -37.01204065810305
+        dy: -111.87636021363616
+    - id: 20
+      border_px: 354
+      direction_contact_px:
+        n: 25
+        e: 88
+        s: 64
+        w: 0
+      centroid_delta_px:
+        dx: 171.18784527869605
+        dy: 57.667692441175916
+    - id: 14
+      border_px: 280
+      direction_contact_px:
+        n: 4
+        e: 2
+        s: 58
+        w: 76
+      centroid_delta_px:
+        dx: -113.8499027129869
+        dy: 99.28553072832602
+    - id: 32
+      border_px: 226
+      direction_contact_px:
+        n: 37
+        e: 76
+        s: 0
+        w: 0
+      centroid_delta_px:
+        dx: 143.49237842458882
+        dy: -133.4061903141977
+    - id: 35
+      border_px: 152
+      direction_contact_px:
+        n: 18
+        e: 14
+        s: 41
+        w: 3
+      centroid_delta_px:
+        dx: 151.3728824212784
+        dy: 12.01552986438304
+    - id: 18
+      border_px: 144
+      direction_contact_px:
+        n: 0
+        e: 19
+        s: 53
+        w: 0
+      centroid_delta_px:
+        dx: -42.270522170701696
+        dy: 166.29439031816952
+    - id: 26
+      border_px: 122
+      direction_contact_px:
+        n: 10
+        e: 48
+        s: 3
+        w: 0
+      centroid_delta_px:
+        dx: 143.2356122016327
+        dy: -37.98551930819326
+    - id: 27
+      border_px: 122
+      direction_contact_px:
+        n: 11
+        e: 0
+        s: 2
+        w: 48
+      centroid_delta_px:
+        dx: -174.45726777517604
+        dy: 36.04916763046708
+    - id: 30
+      border_px: 8
+      direction_contact_px:
+        n: 4
+        e: 0
+        s: 0
+        w: 0
+      centroid_delta_px:
+        dx: 15.608734957772242
+        dy: -219.11223803701682
+    outside_border_px: 0
+  geo: {}
+  notes: []
+- id: 26
+  name: Osrosidhe
+  color_hex: 86c74a
+  kind:
+    medium: land
+    water_class: null
+    island: false
+  extent:
+    area_px: 11634
+    perimeter_px4: 604
+    bbox_px:
+      min_x: 361
+      min_y: 207
+      max_x: 534
+      max_y: 309
+    centroid_px:
+      x: 438.6104521230875
+      y: 263.1659790269899
+  truncation:
+    touches_edge: false
+    edge_contact_px:
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+  topology:
+    neighbors:
+    - id: 35
+      border_px: 418
+      direction_contact_px:
+        n: 0
+        e: 30
+        s: 156
+        w: 23
+      centroid_delta_px:
+        dx: 8.1372702196457
+        dy: 50.0010491725763
+    - id: 32
+      border_px: 364
+      direction_contact_px:
+        n: 118
+        e: 23
+        s: 0
+        w: 41
+      centroid_delta_px:
+        dx: 0.2567662229561165
+        dy: -95.42067100600443
+    - id: 16
+      border_px: 210
+      direction_contact_px:
+        n: 57
+        e: 42
+        s: 6
+        w: 0
+      centroid_delta_px:
+        dx: 66.88363071714917
+        dy: -35.846452399770925
+    - id: 25
+      border_px: 122
+      direction_contact_px:
+        n: 3
+        e: 0
+        s: 10
+        w: 48
+      centroid_delta_px:
+        dx: -143.2356122016327
+        dy: 37.98551930819326
+    - id: 0
+      border_px: 58
+      direction_contact_px: &id003
+        n: 6
+        e: 6
+        s: 11
+        w: 6
+      centroid_delta_px:
+        dx: -129.2135290461644
+        dy: -0.5813636423744697
+    - id: 31
+      border_px: 36
+      direction_contact_px:
+        n: 0
+        e: 17
+        s: 1
+        w: 0
+      centroid_delta_px:
+        dx: 141.73486740007058
+        dy: 1.6487561694142414
+    outside_border_px: 0
+    misc_water_contact:
+      misc_region_id: 0
+      border_px: 58
+      direction_contact_px: *id003
+  geo: {}
+  notes: []
+- id: 27
+  name: Visidiras
+  color_hex: 89b8bf
+  kind:
+    medium: land
+    water_class: null
+    island: false
+  extent:
+    area_px: 17118
+    perimeter_px4: 1416
+    bbox_px:
+      min_x: 20
+      min_y: 175
+      max_x: 210
+      max_y: 469
+    centroid_px:
+      x: 120.91757214627877
+      y: 337.2006659656502
+  truncation:
+    touches_edge: false
+    edge_contact_px:
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+  topology:
+    neighbors:
+    - id: 5
+      border_px: 910
+      direction_contact_px:
+        n: 122
+        e: 1
+        s: 74
+        w: 258
+      centroid_delta_px:
+        dx: -68.11923424512061
+        dy: -34.08750178918484
+    - id: 14
+      border_px: 562
+      direction_contact_px:
+        n: 23
+        e: 117
+        s: 125
+        w: 16
+      centroid_delta_px:
+        dx: 60.60736506218912
+        dy: 63.23636309785894
+    - id: 30
+      border_px: 466
+      direction_contact_px:
+        n: 109
+        e: 90
+        s: 13
+        w: 21
+      centroid_delta_px:
+        dx: 190.06600273294828
+        dy: -255.1614056674839
+    - id: 6
+      border_px: 288
+      direction_contact_px:
+        n: 37
+        e: 54
+        s: 19
+        w: 34
+      centroid_delta_px:
+        dx: 33.86909452038789
+        dy: -49.83233263231688
+    - id: 28
+      border_px: 156
+      direction_contact_px:
+        n: 0
+        e: 14
+        s: 41
+        w: 23
+      centroid_delta_px:
+        dx: 42.268625462056534
+        dy: 264.4663361655361
+    - id: 0
+      border_px: 134
+      direction_contact_px: &id004
+        n: 28
+        e: 5
+        s: 14
+        w: 20
+      centroid_delta_px:
+        dx: 188.47935093064433
+        dy: -74.61605058103481
+    - id: 34
+      border_px: 126
+      direction_contact_px:
+        n: 0
+        e: 24
+        s: 39
+        w: 0
+      centroid_delta_px:
+        dx: -27.269162252285838
+        dy: 135.4224200178598
+    - id: 25
+      border_px: 122
+      direction_contact_px:
+        n: 2
+        e: 48
+        s: 11
+        w: 0
+      centroid_delta_px:
+        dx: 174.45726777517604
+        dy: -36.04916763046708
+    - id: 15
+      border_px: 68
+      direction_contact_px:
+        n: 15
+        e: 19
+        s: 0
+        w: 0
+      centroid_delta_px:
+        dx: 137.445227117073
+        dy: -147.92552784410324
+    outside_border_px: 0
+    misc_water_contact:
+      misc_region_id: 0
+      border_px: 134
+      direction_contact_px: *id004
+  geo: {}
+  notes: []
+- id: 28
+  name: Soterne Sea
+  color_hex: a65ae5
+  kind:
+    medium: water
+    water_class: sea
+    island: false
+  extent:
+    area_px: 67568
+    perimeter_px4: 1826
+    bbox_px:
+      min_x: 0
+      min_y: 435
+      max_x: 390
+      max_y: 699
+    centroid_px:
+      x: 163.1861976083353
+      y: 601.6670021311863
+  truncation:
+    touches_edge: true
+    edge_contact_px:
+      top: 0
+      right: 0
+      bottom: 373
+      left: 239
+  topology:
+    neighbors:
+    - id: 21
+      border_px: 540
+      direction_contact_px:
+        n: 90
+        e: 143
+        s: 31
+        w: 6
+      centroid_delta_px:
+        dx: 251.78866522897295
+        dy: 2.0682458813543008
+    - id: 18
+      border_px: 536
+      direction_contact_px:
+        n: 219
+        e: 47
+        s: 0
+        w: 2
+      centroid_delta_px:
+        dx: 89.91812014241779
+        dy: -134.22111347783368
+    - id: 10
+      border_px: 468
+      direction_contact_px:
+        n: 92
+        e: 25
+        s: 92
+        w: 25
+      centroid_delta_px:
+        dx: 48.017081080189286
+        dy: 29.995292950780822
+    - id: 34
+      border_px: 294
+      direction_contact_px:
+        n: 72
+        e: 45
+        s: 22
+        w: 8
+      centroid_delta_px:
+        dx: -69.53778771434237
+        dy: -129.04391614767633
+    - id: 22
+      border_px: 196
+      direction_contact_px:
+        n: 31
+        e: 18
+        s: 31
+        w: 18
+      centroid_delta_px:
+        dx: -11.488355881716615
+        dy: 50.34378923572012
+    - id: 5
+      border_px: 158
+      direction_contact_px:
+        n: 28
+        e: 17
+        s: 8
+        w: 26
+      centroid_delta_px:
+        dx: -110.38785970717714
+        dy: -298.55383795472096
+    - id: 27
+      border_px: 156
+      direction_contact_px:
+        n: 41
+        e: 23
+        s: 0
+        w: 14
+      centroid_delta_px:
+        dx: -42.268625462056534
+        dy: -264.4663361655361
+    - id: 13
+      border_px: 70
+      direction_contact_px:
+        n: 0
+        e: 17
+        s: 18
+        w: 0
+      centroid_delta_px:
+        dx: 305.83962517647484
+        dy: 86.06869407134536
+    - id: 24
+      border_px: 10
+      direction_contact_px:
+        n: 2
+        e: 3
+        s: 0
+        w: 0
+      centroid_delta_px:
+        dx: 306.4988660736408
+        dy: -104.62851225363818
+    outside_border_px: 612
+  geo: {}
+  notes: []
+- id: 29
+  name: Stroomstrond
+  color_hex: b0c74a
+  kind:
+    medium: land
+    water_class: null
+    island: false
+  extent:
+    area_px: 1864
+    perimeter_px4: 322
+    bbox_px:
+      min_x: 597
+      min_y: 162
+      max_x: 640
+      max_y: 254
+    centroid_px:
+      x: 621.0949570815451
+      y: 209.87607296137338
+  truncation:
+    touches_edge: false
+    edge_contact_px:
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+  topology:
+    neighbors:
+    - id: 12
+      border_px: 212
+      direction_contact_px:
+        n: 29
+        e: 76
+        s: 0
+        w: 1
+      centroid_delta_px:
+        dx: 41.91557992492949
+        dy: -73.63169058229505
+    - id: 30
+      border_px: 148
+      direction_contact_px:
+        n: 24
+        e: 0
+        s: 10
+        w: 40
+      centroid_delta_px:
+        dx: -310.11138220231805
+        dy: -127.83681266320706
+    - id: 31
+      border_px: 144
+      direction_contact_px:
+        n: 0
+        e: 0
+        s: 41
+        w: 31
+      centroid_delta_px:
+        dx: -40.74963755838701
+        dy: 54.93866223503073
+    - id: 3
+      border_px: 62
+      direction_contact_px:
+        n: 6
+        e: 17
+        s: 8
+        w: 0
+      centroid_delta_px:
+        dx: 40.103916028326694
+        dy: 171.0439523361601
+    - id: 33
+      border_px: 46
+      direction_contact_px:
+        n: 1
+        e: 0
+        s: 1
+        w: 21
+      centroid_delta_px:
+        dx: -47.69748872711466
+        dy: -14.981136252512613
+    - id: 0
+      border_px: 32
+      direction_contact_px: &id005
+        n: 4
+        e: 4
+        s: 4
+        w: 4
+      centroid_delta_px:
+        dx: -311.698034004622
+        dy: 52.70854242324202
+    outside_border_px: 0
+    misc_water_contact:
+      misc_region_id: 0
+      border_px: 32
+      direction_contact_px: *id005
+  geo: {}
+  notes: []
+- id: 30
+  name: North Sea
+  color_hex: b7a3d1
+  kind:
+    medium: water
+    water_class: sea
+    island: false
+  extent:
+    area_px: 96255
+    perimeter_px4: 2952
+    bbox_px:
+      min_x: 2
+      min_y: 0
+      max_x: 699
+      max_y: 290
+    centroid_px:
+      x: 310.98357487922704
+      y: 82.03926029816633
+  truncation:
+    touches_edge: true
+    edge_contact_px:
+      top: 698
+      right: 2
+      bottom: 0
+      left: 0
+  topology:
+    neighbors:
+    - id: 15
+      border_px: 956
+      direction_contact_px:
+        n: 36
+        e: 190
+        s: 163
+        w: 89
+      centroid_delta_px:
+        dx: -52.62077561587529
+        dy: 107.23587782338065
+    - id: 32
+      border_px: 906
+      direction_contact_px:
+        n: 16
+        e: 109
+        s: 237
+        w: 91
+      centroid_delta_px:
+        dx: 127.88364346681658
+        dy: 85.70604772281912
+    - id: 17
+      border_px: 540
+      direction_contact_px:
+        n: 63
+        e: 72
+        s: 63
+        w: 72
+      centroid_delta_px:
+        dx: 180.55201230938508
+        dy: 4.862874933150394
+    - id: 12
+      border_px: 518
+      direction_contact_px:
+        n: 5
+        e: 161
+        s: 93
+        w: 0
+      centroid_delta_px:
+        dx: 352.02696212724754
+        dy: 54.205122080912005
+    - id: 27
+      border_px: 466
+      direction_contact_px:
+        n: 13
+        e: 21
+        s: 109
+        w: 90
+      centroid_delta_px:
+        dx: -190.06600273294828
+        dy: 255.1614056674839
+    - id: 1
+      border_px: 458
+      direction_contact_px:
+        n: 0
+        e: 0
+        s: 56
+        w: 173
+      centroid_delta_px:
+        dx: -294.5233349858463
+        dy: 60.56180589463686
+    - id: 33
+      border_px: 274
+      direction_contact_px:
+        n: 9
+        e: 8
+        s: 59
+        w: 61
+      centroid_delta_px:
+        dx: 262.4138934752034
+        dy: 112.85567641069444
+    - id: 6
+      border_px: 156
+      direction_contact_px:
+        n: 8
+        e: 12
+        s: 26
+        w: 32
+      centroid_delta_px:
+        dx: -156.19690821256037
+        dy: 205.32907303516703
+    - id: 29
+      border_px: 148
+      direction_contact_px:
+        n: 10
+        e: 40
+        s: 24
+        w: 0
+      centroid_delta_px:
+        dx: 310.11138220231805
+        dy: 127.83681266320706
+    - id: 5
+      border_px: 74
+      direction_contact_px:
+        n: 0
+        e: 3
+        s: 24
+        w: 10
+      centroid_delta_px:
+        dx: -258.1852369780689
+        dy: 221.07390387829906
+    - id: 25
+      border_px: 8
+      direction_contact_px:
+        n: 0
+        e: 0
+        s: 4
+        w: 0
+      centroid_delta_px:
+        dx: -15.608734957772242
+        dy: 219.11223803701682
+    outside_border_px: 700
+  geo: {}
+  notes: []
+- id: 31
+  name: Varmalund
+  color_hex: c74a4a
+  kind:
+    medium: land
+    water_class: null
+    island: false
+  extent:
+    area_px: 10234
+    perimeter_px4: 564
+    bbox_px:
+      min_x: 523
+      min_y: 201
+      max_x: 650
+      max_y: 329
+    centroid_px:
+      x: 580.3453195231581
+      y: 264.8147351964041
+  truncation:
+    touches_edge: false
+    edge_contact_px:
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+  topology:
+    neighbors:
+    - id: 20
+      border_px: 388
+      direction_contact_px:
+        n: 0
+        e: 35
+        s: 112
+        w: 47
+      centroid_delta_px:
+        dx: -113.78263432300724
+        dy: 94.00445557995494
+    - id: 16
+      border_px: 160
+      direction_contact_px:
+        n: 4
+        e: 0
+        s: 14
+        w: 62
+      centroid_delta_px:
+        dx: -74.85123668292141
+        dy: -37.495208569185166
+    - id: 3
+      border_px: 146
+      direction_contact_px:
+        n: 16
+        e: 49
+        s: 8
+        w: 0
+      centroid_delta_px:
+        dx: 80.8535535867137
+        dy: 116.10529010112936
+    - id: 33
+      border_px: 146
+      direction_contact_px:
+        n: 50
+        e: 23
+        s: 0
+        w: 0
+      centroid_delta_px:
+        dx: -6.947851168727652
+        dy: -69.91979848754335
+    - id: 29
+      border_px: 144
+      direction_contact_px:
+        n: 41
+        e: 31
+        s: 0
+        w: 0
+      centroid_delta_px:
+        dx: 40.74963755838701
+        dy: -54.93866223503073
+    - id: 32
+      border_px: 60
+      direction_contact_px:
+        n: 25
+        e: 0
+        s: 0
+        w: 5
+      centroid_delta_px:
+        dx: -141.47810117711447
+        dy: -97.06942717541867
+    - id: 0
+      border_px: 44
+      direction_contact_px: &id006
+        n: 5
+        e: 2
+        s: 8
+        w: 7
+      centroid_delta_px:
+        dx: -270.948396446235
+        dy: -2.230119811788711
+    - id: 26
+      border_px: 36
+      direction_contact_px:
+        n: 1
+        e: 0
+        s: 0
+        w: 17
+      centroid_delta_px:
+        dx: -141.73486740007058
+        dy: -1.6487561694142414
+    - id: 35
+      border_px: 4
+      direction_contact_px:
+        n: 0
+        e: 0
+        s: 0
+        w: 2
+      centroid_delta_px:
+        dx: -133.59759718042488
+        dy: 48.35229300316206
+    outside_border_px: 0
+    misc_water_contact:
+      misc_region_id: 0
+      border_px: 44
+      direction_contact_px: *id006
+  geo: {}
+  notes: []
+- id: 32
+  name: Brishladhe
+  color_hex: c74ac5
+  kind:
+    medium: land
+    water_class: null
+    island: false
+  extent:
+    area_px: 18489
+    perimeter_px4: 980
+    bbox_px:
+      min_x: 327
+      min_y: 107
+      max_x: 556
+      max_y: 243
+    centroid_px:
+      x: 438.8672183460436
+      y: 167.74530802098545
+  truncation:
+    touches_edge: false
+    edge_contact_px:
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+  topology:
+    neighbors:
+    - id: 30
+      border_px: 906
+      direction_contact_px:
+        n: 237
+        e: 91
+        s: 16
+        w: 109
+      centroid_delta_px:
+        dx: -127.88364346681658
+        dy: -85.70604772281912
+    - id: 26
+      border_px: 364
+      direction_contact_px:
+        n: 0
+        e: 41
+        s: 118
+        w: 23
+      centroid_delta_px:
+        dx: -0.2567662229561165
+        dy: 95.42067100600443
+    - id: 25
+      border_px: 226
+      direction_contact_px:
+        n: 0
+        e: 0
+        s: 37
+        w: 76
+      centroid_delta_px:
+        dx: -143.49237842458882
+        dy: 133.4061903141977
+    - id: 16
+      border_px: 194
+      direction_contact_px:
+        n: 6
+        e: 32
+        s: 47
+        w: 12
+      centroid_delta_px:
+        dx: 66.62686449419306
+        dy: 59.5742186062335
+    - id: 33
+      border_px: 146
+      direction_contact_px:
+        n: 11
+        e: 51
+        s: 11
+        w: 0
+      centroid_delta_px:
+        dx: 134.53025000838682
+        dy: 27.14962868787532
+    - id: 0
+      border_px: 64
+      direction_contact_px: &id007
+        n: 6
+        e: 10
+        s: 6
+        w: 10
+      centroid_delta_px:
+        dx: -129.47029526912053
+        dy: 94.83930736362996
+    - id: 31
+      border_px: 60
+      direction_contact_px:
+        n: 0
+        e: 5
+        s: 25
+        w: 0
+      centroid_delta_px:
+        dx: 141.47810117711447
+        dy: 97.06942717541867
+    outside_border_px: 0
+    misc_water_contact:
+      misc_region_id: 0
+      border_px: 64
+      direction_contact_px: *id007
+  geo: {}
+  notes: []
+- id: 33
+  name: Myrstrond
+  color_hex: c79b4a
+  kind:
+    medium: land
+    water_class: null
+    island: false
+  extent:
+    area_px: 1580
+    perimeter_px4: 306
+    bbox_px:
+      min_x: 548
+      min_y: 150
+      max_x: 597
+      max_y: 223
+    centroid_px:
+      x: 573.3974683544304
+      y: 194.89493670886077
+  truncation:
+    touches_edge: false
+    edge_contact_px:
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+  topology:
+    neighbors:
+    - id: 30
+      border_px: 274
+      direction_contact_px:
+        n: 59
+        e: 61
+        s: 9
+        w: 8
+      centroid_delta_px:
+        dx: -262.4138934752034
+        dy: -112.85567641069444
+    - id: 31
+      border_px: 146
+      direction_contact_px:
+        n: 0
+        e: 0
+        s: 50
+        w: 23
+      centroid_delta_px:
+        dx: 6.947851168727652
+        dy: 69.91979848754335
+    - id: 32
+      border_px: 146
+      direction_contact_px:
+        n: 11
+        e: 0
+        s: 11
+        w: 51
+      centroid_delta_px:
+        dx: -134.53025000838682
+        dy: -27.14962868787532
+    - id: 29
+      border_px: 46
+      direction_contact_px:
+        n: 1
+        e: 21
+        s: 1
+        w: 0
+      centroid_delta_px:
+        dx: 47.69748872711466
+        dy: 14.981136252512613
+    outside_border_px: 0
+  geo: {}
+  notes: []
+- id: 34
+  name: Sekmar
+  color_hex: d7d7d7
+  kind:
+    medium: land
+    water_class: null
+    island: false
+  extent:
+    area_px: 3396
+    perimeter_px4: 358
+    bbox_px:
+      min_x: 45
+      min_y: 437
+      max_x: 142
+      max_y: 505
+    centroid_px:
+      x: 93.64840989399293
+      y: 472.62308598351
+  truncation:
+    touches_edge: false
+    edge_contact_px:
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+  topology:
+    neighbors:
+    - id: 28
+      border_px: 294
+      direction_contact_px:
+        n: 22
+        e: 8
+        s: 72
+        w: 45
+      centroid_delta_px:
+        dx: 69.53778771434237
+        dy: 129.04391614767633
+    - id: 14
+      border_px: 264
+      direction_contact_px:
+        n: 49
+        e: 51
+        s: 32
+        w: 0
+      centroid_delta_px:
+        dx: 87.87652731447496
+        dy: -72.18605692000085
+    - id: 27
+      border_px: 126
+      direction_contact_px:
+        n: 39
+        e: 0
+        s: 0
+        w: 24
+      centroid_delta_px:
+        dx: 27.269162252285838
+        dy: -135.4224200178598
+    - id: 18
+      border_px: 32
+      direction_contact_px:
+        n: 0
+        e: 10
+        s: 6
+        w: 0
+      centroid_delta_px:
+        dx: 159.45590785676018
+        dy: -5.177197330157355
+    outside_border_px: 0
+  geo: {}
+  notes: []
+- id: 35
+  name: Berberye
+  color_hex: d9d9d9
+  kind:
+    medium: land
+    water_class: null
+    island: false
+  extent:
+    area_px: 4610
+    perimeter_px4: 592
+    bbox_px:
+      min_x: 330
+      min_y: 285
+      max_x: 539
+      max_y: 343
+    centroid_px:
+      x: 446.7477223427332
+      y: 313.1670281995662
+  truncation:
+    touches_edge: false
+    edge_contact_px:
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+  topology:
+    neighbors:
+    - id: 20
+      border_px: 584
+      direction_contact_px:
+        n: 5
+        e: 53
+        s: 192
+        w: 42
+      centroid_delta_px:
+        dx: 19.81496285741764
+        dy: 45.652162576792875
+    - id: 26
+      border_px: 418
+      direction_contact_px:
+        n: 156
+        e: 23
+        s: 0
+        w: 30
+      centroid_delta_px:
+        dx: -8.1372702196457
+        dy: -50.0010491725763
+    - id: 25
+      border_px: 152
+      direction_contact_px:
+        n: 41
+        e: 3
+        s: 18
+        w: 14
+      centroid_delta_px:
+        dx: -151.3728824212784
+        dy: -12.01552986438304
+    - id: 0
+      border_px: 26
+      direction_contact_px: &id008
+        n: 8
+        e: 5
+        s: 0
+        w: 0
+      centroid_delta_px:
+        dx: -137.3507992658101
+        dy: -50.58241281495077
+    - id: 31
+      border_px: 4
+      direction_contact_px:
+        n: 0
+        e: 2
+        s: 0
+        w: 0
+      centroid_delta_px:
+        dx: 133.59759718042488
+        dy: -48.35229300316206
+    outside_border_px: 0
+    misc_water_contact:
+      misc_region_id: 0
+      border_px: 26
+      direction_contact_px: *id008
+  geo: {}
+  notes: []
+notes:
+- All geometry metrics (centroid/bbox/area/perimeter) are computed in-frame within
+  the 700x700 snapshot.
+- The black label (#000000) represents multiple disconnected water components but
+  is stored as a single region ID in this dataset; per-component enclosure would require
+  connected-component labeling.

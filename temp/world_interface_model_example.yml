@@ -1,0 +1,66 @@
+version: 1
+coord_space:
+  name: example_europe
+  note: "Conceptual example; border metrics are illustrative."
+
+interfaces:
+  - a: R_N_ITALY
+    b: R_SWITZERLAND
+    adjacency: true
+    border:
+      length_px: 842
+      segments:
+        - share: 0.80
+          type: mountain_barrier
+          feature_id: F_ALPS
+          permeability:
+            baseline: 0.15
+            seasonal:
+              winter: 0.05
+              spring: 0.10
+              summer: 0.20
+              autumn: 0.12
+          notes: "Alps dominate the border; winter crossings largely constrained to prepared routes."
+        - share: 0.20
+          type: mountain_pass_corridor
+          feature_id: F_GREAT_ST_BERNARD_PASS
+          permeability:
+            baseline: 0.65
+            seasonal:
+              winter: 0.20
+              spring: 0.55
+              summer: 0.70
+              autumn: 0.60
+          notes: "Named pass corridors concentrate trade/movement; snow reduces winter throughput."
+    constraints:
+      political:
+        baseline: 0.85
+        note: "Example: high cooperation; adjust for setting."
+
+  - a: R_SWITZERLAND
+    b: R_GERMANY
+    adjacency: true
+    border:
+      length_px: 610
+      segments:
+        - share: 0.70
+          type: river_boundary
+          feature_id: F_RHINE_RIVER
+          permeability:
+            baseline: 0.55
+            seasonal:
+              winter: 0.50
+              spring: 0.45
+              summer: 0.55
+              autumn: 0.55
+          notes: "River forms much of the boundary; bridges/ferries make crossing moderate." 
+        - share: 0.30
+          type: lowland_corridor
+          feature_id: null
+          permeability:
+            baseline: 0.75
+            seasonal:
+              winter: 0.70
+              spring: 0.72
+              summer: 0.78
+              autumn: 0.75
