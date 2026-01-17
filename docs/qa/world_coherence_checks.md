@@ -45,6 +45,7 @@ This document defines measurable, automatable checks for world-model coherence a
 **Intent:** Adjacent biomes should follow realistic transitions (e.g., desert → steppe → grassland → forest).
 
 **Method:** Validate adjacency against a permitted transition matrix.
+When computing derived transition metrics, apply tag-driven adjustments from `data/source/yaml/feature_effects.v1.yaml` (e.g., `rain_shadow`, `coastal_upwelling`, `marine_moderation`) to interpret transitional modifiers before scoring pass/fail.
 
 **Allowed Transitions (non-exhaustive):**
 - Desert ↔ Steppe ↔ Grassland ↔ Temperate Forest

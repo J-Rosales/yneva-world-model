@@ -68,6 +68,7 @@ Suggested fields (sparse allowed):
 - Region `geo` may be **inferred/adjusted** using feature tags:
   - `glacial_fed` rivers increase `baseflow_index` and reduce `drying_risk_summer` in regions they cross.
   - `rain_shadow` from a mountain range reduces region precipitation on the lee side (if you model wind direction).
+- Use the centralized tag-to-geo adjustment map in `data/source/yaml/feature_effects.v1.yaml` to keep feature-driven adjustments consistent across regions and any derived transition metrics.
 
 ## How features interact with interfaces
 Interfaces describe the relationship between two regions. Feature geometry explains **why**:
@@ -81,4 +82,5 @@ Interfaces describe the relationship between two regions. Feature geometry expla
 2. Compute per-feature overlap with regions: `coverage_frac`.
 3. For each adjacent region pair, compute border pixels and tally feature labels along the border.
 4. Store computed overlap/border presence in `relations`.
-5. Use these relations to auto-generate initial interface segments; then allow hand overrides in the interface YAML.
+5. Apply feature tag adjustments from `data/source/yaml/feature_effects.v1.yaml` when deriving region `geo` summaries and transition metrics.
+6. Use these relations to auto-generate initial interface segments; then allow hand overrides in the interface YAML.
