@@ -1,0 +1,60 @@
+version: v1
+name: yneva_language_continuum_palette
+era: "8th Century B.R."
+spatial_alignment:
+  raster_indices: data/source/rasters/regions/colorLanguageContinuum_indices.npy
+  reference_png: data/source/rasters/regions/colorcodes.png
+  description: >-
+    Index raster aligned to the same spatial extent as colorcodes.png.
+    Each index maps to a language or interaction region for the 8th Century B.R.
+notes:
+  - Index 2 represents a Rommish-Lacurian interaction region (not a language).
+indices:
+  0:
+    hex: "000000"
+    name: Unassigned
+  1:
+    hex: "3B6CB0"
+    name: Lacurian
+  2:
+    hex: "4A89DF"
+    name: Rommish-Lacurian Dialect
+  3:
+    hex: "B4A611"
+    name: Rommish
+  4:
+    hex: "9C8F09"
+    name: Oscan
+  5:
+    hex: "847901"
+    name: Ombrish
+  6:
+    hex: "0C8401"
+    name: Ancient Ynevan
+  7:
+    hex: "600676"
+    name: Sakandish
+  8:
+    hex: "067626"
+    name: Rendish
+  9:
+    hex: "540808"
+    name: Goddish
+  10:
+    hex: "FF2C4F"
+    name: Peshic
+  11:
+    hex: "3300FF"
+    name: Talavish
+  12:
+    hex: "FF5D78"
+    name: Old Talavish
+  13:
+    hex: "ED7D2E"
+    name: Adinian
+  14:
+    hex: "2CFFFF"
+    name: Undic
+  15:
+    hex: "1B0184"
+    name: Lobric
